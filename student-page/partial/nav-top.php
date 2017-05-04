@@ -10,7 +10,6 @@
         <a class="dropdown-toggle" data-toggle="dropdown" href="#"><?php echo $name; ?>
         <span class="caret"></span></a>
         <ul class="dropdown-menu">
-        	<li><a href="registration.php">Create User</a></li>
         	<li><a href="../php_func/logout.php">Logout</a></li>
         </ul>
       </li>

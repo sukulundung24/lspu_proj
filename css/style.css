@@ -62,3 +62,11 @@ body {
   float: right;
   margin: 5px 0;
 }
+
+.surv-input {
+  width: 50px;
+}
+
+/*table tr th  {
+  text-align: center;
+}*/

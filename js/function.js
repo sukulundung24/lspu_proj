@@ -12,6 +12,8 @@ $(document).ready(function(){
 		function(success){
 			if(success=="admin"){
 				location.href="admin-page/dashboard.php";
+			} else if(success=="student"){
+				location.href="student-page/dashboard.php";
 			} else {
 				$('#login_error').show();
 				$('#error_message').text('Invalid Username/password');

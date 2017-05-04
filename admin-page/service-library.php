@@ -24,10 +24,10 @@
 		    		<div class="content-holder">
 		    			<div class="row">
 		    				<div class="col-md-6">
-		    					<h3 style="margin:10px 0;">General Question List</h3>
+		    					<h3 style="margin:10px 0;">Library Question List</h3>
 		    				</div>
 		    				<div class="col-md-6">
-		    					<a href="add-question.php?service_type=general" class="btn btn-success addbtn"><i class="glyphicon glyphicon-plus"></i> Add</a>
+		    					<a href="add-question.php?service_type=library" class="btn btn-success addbtn"><i class="glyphicon glyphicon-plus"></i> Add</a>
 		    				</div>
 		    			</div>
 		    			
@@ -40,7 +40,7 @@
 		    				</thead>
 		    				<tbody>
 		    					<?php
-		    						$query = "Select * from tbl_question where service_type='general'";
+		    						$query = "Select * from tbl_question where service_type='library'";
 
 									$resp = @mysqli_query($dbc, $query);
 									if($resp){
