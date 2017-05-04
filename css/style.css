@@ -1,0 +1,64 @@
+body {
+	background-color: #69776a;
+	padding: 50px;
+}
+
+.header-title{
+	color: white;
+}
+
+.logo {
+	width:100%;
+	height:auto;
+}
+
+.lineHeader {
+	border: 10px solid #36e242;
+}
+
+.login-holder {
+	width:100%;
+	height: auto;
+	background-color: white;
+	padding: 30px;
+}
+
+/* make sidebar nav vertical */ 
+@media (min-width: 768px) {
+  .sidebar-nav .navbar .navbar-collapse {
+    padding: 0;
+    max-height: none;
+  }
+  .sidebar-nav .navbar ul {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li {
+    float: none;
+    display: block;
+  }
+  .sidebar-nav .navbar li h4 {
+  	padding-top: 12px;
+  	padding-bottom: 12px;
+  	text-align: center;
+  }
+  .sidebar-nav .navbar li a {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+}
+
+.cover-dash {
+	width:100%;
+	height:auto;
+}
+
+.content-holder {
+	padding: 20px;
+	background-color:white;
+}
+
+.addbtn {
+  float: right;
+  margin: 5px 0;
+}
