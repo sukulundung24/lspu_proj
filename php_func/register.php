@@ -15,20 +15,27 @@
 
 	if($fname && $mname && $lname && $user_type && $c_password && $user_type && $id_num && $office && $position && $username && $password){
 		if($password == $c_password){
-			$query = "INSERT INTO tbl_user (username,password,fname,mname,lname,type,id_num,office,position) VALUES(?,?,?,?,?,?,?,?,?)";
-			$stmt = mysqli_prepare($dbc,$query);
+			$query = "Select * from tbl_user where username='".$username."' ";
+			$response = @mysqli_query($dbc, $query);
 
-			// (sssssssss) means 9 string data types.
-			mysqli_stmt_bind_param($stmt,"sssssssss",$username,$password,$fname,$mname,$lname,$user_type,$id_num,$office,$position);
-
-			mysqli_stmt_execute($stmt);
-			$affected_rows = mysqli_stmt_affected_rows($stmt);
-			if($affected_rows==1){
-				echo "success";
-				mysqli_stmt_close($stmt);
-				mysqli_close($dbc);
+			if($response->num_rows >0){
+				echo "Username already taken!";
 			} else {
-				echo "Error occured. (".mysqli_error().")";
+				$query = "INSERT INTO tbl_user (username,password,fname,mname,lname,type,id_num,office,position) VALUES(?,?,?,?,?,?,?,?,?)";
+				$stmt = mysqli_prepare($dbc,$query);
+
+				// (sssssssss) means 9 string data types.
+				mysqli_stmt_bind_param($stmt,"sssssssss",$username,$password,$fname,$mname,$lname,$user_type,$id_num,$office,$position);
+
+				mysqli_stmt_execute($stmt);
+				$affected_rows = mysqli_stmt_affected_rows($stmt);
+				if($affected_rows==1){
+					echo "success";
+					mysqli_stmt_close($stmt);
+					mysqli_close($dbc);
+				} else {
+					echo "Error occured. (".mysqli_error().")";
+				}
 			}
 		} else {
 			echo "Password didn't match!";
