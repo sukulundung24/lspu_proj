@@ -120,4 +120,237 @@ $(document).ready(function(){
 		})
 	})
 
+// =================== submit survey =====================
+	$('#submit-survey').click(function(e){
+		e.preventDefault();
+		var cur = $(this);
+		var data = [];
+
+		//================ general ====================
+		$('.gen-input').each(function(i){
+			var name = '.general-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+			
+		})
+
+		//================ registrarship ==============
+		$('.reg-input').each(function(i){
+			var name = '.registrarship-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//=============== alumni ==============
+		$('.alu-input').each(function(i){
+			var name = '.alumni-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//============== administration ==========
+		$('.adm-input').each(function(i){
+			var name = '.administration-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//============== Accounting =================
+		$('.acc-input').each(function(i){
+			var name = '.accounting-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//============= Business =================
+		$('.bus-input').each(function(i){
+			var name = '.business-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//========== Cashier ===========
+		$('.cas-input').each(function(i){
+			var name = '.cashier-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//=========== clinic =============
+		$('.cli-input').each(function(i){
+			var name = '.clinic-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//============== Extension =================
+		$('.ext-input').each(function(i){
+			var name = '.extension-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//=============== gender ==============
+		$('.gend-input').each(function(i){
+			var name = '.gender-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//============== Guidance ============ 
+		$('.gui-input').each(function(i){
+			var name = '.guidance-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		// ================  ICTS  ===================
+		$('.ict-input').each(function(i){
+			var name = '.icts-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//============= Library ==============
+		$('.lib-input').each(function(i){
+			var name = '.library-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//============ NSTP =============
+		$('.nst-input').each(function(i){
+			var name = '.nstp-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//============= Physical ===============
+		$('.phy-input').each(function(i){
+			var name = '.physical-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//============= research ==============
+		$('.res-input').each(function(i){
+			var name = '.research-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//============== Scholarship ===========
+		$('.sch-input').each(function(i){
+			var name = '.scholarship-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		//============== Student ==========
+		$('.stu-input').each(function(i){
+			var name = '.student-ans'+(i+1);
+			var data_answer = $(name+':checked').val()
+			if(data_answer){
+				data.push({	
+					answer:data_answer,
+					quest_id: $(this).data("id")
+				})
+			}
+		})
+
+		$.post('../php_func/save_answer.php',
+		{
+			data: data,
+		},
+		function(data){
+			console.log(data);
+		})
+
+	})
+
 });

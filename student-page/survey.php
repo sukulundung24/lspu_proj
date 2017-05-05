@@ -28,7 +28,7 @@
     						<?php include('questionaire.php') ?>
 
 		    			<br>
-		    			<button class="btn center-block btn-success">Submit</button>
+		    			<button id="submit-survey" class="btn center-block btn-success">Submit</button>
 		    		</div>
 		    	</div>
 		    </div>

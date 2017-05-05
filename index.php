@@ -6,7 +6,15 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-	<?php 
+	<?php
+		session_start();
+		if(isset($_SESSION['username'])){
+			if($_SESSION['user_type']=="admin"){
+				header('Location: admin-page/dashboard.php');
+			} else {
+				header('Location: student-page/dashboard.php');
+			}
+		}
 		include('header.php');
 	?>
 
