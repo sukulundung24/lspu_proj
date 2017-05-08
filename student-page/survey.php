@@ -24,9 +24,12 @@
 		    	<div class="col-md-12">
 		    		<div class="content-holder">
 		    			<h3><b>Survey</b></h3>
-
+		    			<div class="general-service">
+		    				<?php include('general-survey.php');?>
+		    			</div>
+		    			<div class="main-services">
     						<?php include('questionaire.php') ?>
-
+						</div>
 		    			<br>
 		    			<button id="submit-survey" class="btn center-block btn-success">Submit</button>
 		    		</div>

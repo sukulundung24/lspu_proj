@@ -352,5 +352,7 @@ $(document).ready(function(){
 		})
 
 	})
+	
+	$('.main-services').hide();
 
 });

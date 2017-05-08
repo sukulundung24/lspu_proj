@@ -109,11 +109,11 @@
 ?>
 	<tr>
 		<td class="reg-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="5" name="registrarship-ans<?php echo $counter; ?>"></td>
-		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="4" name="registrarship-ans<?php echo $counter; ?>"></td>
-		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="3" name="registrarship-ans<?php echo $counter; ?>"></td>
-		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="2" name="registrarship-ans<?php echo $counter; ?>"></td>
-		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="1" name="registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_registrarship-ans<?php echo $counter; ?>" type="radio" value="5" name="1_registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_registrarship-ans<?php echo $counter; ?>" type="radio" value="4" name="1_registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_registrarship-ans<?php echo $counter; ?>" type="radio" value="3" name="1_registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_registrarship-ans<?php echo $counter; ?>" type="radio" value="2" name="1_registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_registrarship-ans<?php echo $counter; ?>" type="radio" value="1" name="1_registrarship-ans<?php echo $counter; ?>"></td>
 
 		<td><input class="2_registrarship-ans<?php echo $counter; ?>" type="radio" value="5" name="2_registrarship-ans<?php echo $counter; ?>"></td>
 		<td><input class="2_registrarship-ans<?php echo $counter; ?>" type="radio" value="4" name="2_registrarship-ans<?php echo $counter; ?>"></td>
@@ -168,11 +168,11 @@
 ?>
 	<tr>
 		<td class="alu-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="alumni-ans<?php echo $counter; ?>" type="radio" value="5" name="alumni-ans<?php echo $counter; ?>"></td>
-		<td><input class="alumni-ans<?php echo $counter; ?>" type="radio" value="4" name="alumni-ans<?php echo $counter; ?>"></td>
-		<td><input class="alumni-ans<?php echo $counter; ?>" type="radio" value="3" name="alumni-ans<?php echo $counter; ?>"></td>
-		<td><input class="alumni-ans<?php echo $counter; ?>" type="radio" value="2" name="alumni-ans<?php echo $counter; ?>"></td>
-		<td><input class="alumni-ans<?php echo $counter; ?>" type="radio" value="1" name="alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_alumni-ans<?php echo $counter; ?>" type="radio" value="5" name="1_alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_alumni-ans<?php echo $counter; ?>" type="radio" value="4" name="1_alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_alumni-ans<?php echo $counter; ?>" type="radio" value="3" name="1_alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_alumni-ans<?php echo $counter; ?>" type="radio" value="2" name="1_alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_alumni-ans<?php echo $counter; ?>" type="radio" value="1" name="1_alumni-ans<?php echo $counter; ?>"></td>
 
 		<td><input class="2_alumni-ans<?php echo $counter; ?>" type="radio" value="5" name="2_alumni-ans<?php echo $counter; ?>"></td>
 		<td><input class="2_alumni-ans<?php echo $counter; ?>" type="radio" value="4" name="2_alumni-ans<?php echo $counter; ?>"></td>

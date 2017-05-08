@@ -75,3 +75,7 @@ body {
 .tbl-style tr td:nth-child(1){
   width:50%;
 }
+
+.tbl-general-style tr td:nth-child(2){
+  width:33%;
+}
