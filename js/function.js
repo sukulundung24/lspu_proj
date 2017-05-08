@@ -354,5 +354,26 @@ $(document).ready(function(){
 	})
 	
 	$('.main-services').hide();
+	$('#back-survey').hide();
+	$('#submit-survey').hide();
+
+	$('#next-survey').on('click',function(e){
+		$('.main-services').show();
+		$('#back-survey').show();
+		$('#submit-survey').show();
+
+		$('.general-service').hide();
+		$(this).hide();
+	})
+
+	$('#back-survey').on('click',function(e){
+		$(this).hide();
+		$('.main-services').hide();
+		$('#submit-survey').hide();
+
+		$('.general-service').show();
+		$('#next-survey').show();
+
+	})
 
 });

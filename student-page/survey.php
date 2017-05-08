@@ -31,7 +31,10 @@
     						<?php include('questionaire.php') ?>
 						</div>
 		    			<br>
-		    			<button id="submit-survey" class="btn center-block btn-success">Submit</button>
+		    			
+		    			<button id="back-survey" class="btn btn-default">Back</button>
+		    			<button id="next-survey" class="btn btn-success">Next</button>
+		    			<button id="submit-survey" class="btn btn-success">Finish</button>
 		    		</div>
 		    	</div>
 		    </div>
