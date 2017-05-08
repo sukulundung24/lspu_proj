@@ -127,17 +127,17 @@ $(document).ready(function(){
 		var data = [];
 
 		//================ general ====================
-		$('.gen-input').each(function(i){
-			var name = '.general-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
-				data.push({	
-					answer:data_answer,
-					quest_id: $(this).data("id")
-				})
-			}
+		// $('.gen-input').each(function(i){
+		// 	var name = '.general-ans'+(i+1);
+		// 	var data_answer = $(name+':checked').val()
+		// 	if(data_answer){
+		// 		data.push({	
+		// 			answer:data_answer,
+		// 			quest_id: $(this).data("id")
+		// 		})
+		// 	}
 			
-		})
+		// })
 
 		//================ registrarship ==============
 		$('.reg-input').each(function(i){

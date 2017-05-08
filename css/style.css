@@ -1,6 +1,7 @@
 body {
-	background-color: #69776a;
+	background-color: #eaeaea;
 	padding: 50px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .header-title{
@@ -70,3 +71,7 @@ body {
 /*table tr th  {
   text-align: center;
 }*/
+
+.tbl-style tr td:nth-child(1){
+  width:50%;
+}

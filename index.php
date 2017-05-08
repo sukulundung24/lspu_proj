@@ -3,7 +3,9 @@
 <head>
 	<title>LSPU - Login</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	
 </head>
 <body>
 	<?php

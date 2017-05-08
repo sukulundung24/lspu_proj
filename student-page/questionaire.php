@@ -1,12 +1,12 @@
 <!-- ============= General ================= -->
-<?php
+<!-- <?php
 	$query = "Select * from tbl_question where service_type ='general'";
 
 	$resp = @mysqli_query($dbc, $query);
 	if($resp->num_rows >0){
 ?>
 	<h4><b>General</b></h4>
-	<table class="table">
+	<table class="table table-bordered tbl-style">
 	<colgroup>
         <col class="col-md-7">
         <col class="col-md-1">
@@ -15,8 +15,24 @@
         <col class="col-md-1">
         <col class="col-md-1">
     </colgroup>
+    <tr>
+    	<th colspan="1">Question</th>
+    	<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+    </tr>
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -34,13 +50,25 @@
 		<td><input class="general-ans<?php echo $counter; ?>" type="radio" value="3" name="general-ans<?php echo $counter; ?>"></td>
 		<td><input class="general-ans<?php echo $counter; ?>" type="radio" value="2" name="general-ans<?php echo $counter; ?>"></td>
 		<td><input class="general-ans<?php echo $counter; ?>" type="radio" value="1" name="general-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_general-ans<?php echo $counter; ?>" type="radio" value="5" name="2_general-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_general-ans<?php echo $counter; ?>" type="radio" value="4" name="2_general-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_general-ans<?php echo $counter; ?>" type="radio" value="3" name="2_general-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_general-ans<?php echo $counter; ?>" type="radio" value="2" name="2_general-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_general-ans<?php echo $counter; ?>" type="radio" value="1" name="2_general-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_general-ans<?php echo $counter; ?>" type="radio" value="5" name="3_general-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_general-ans<?php echo $counter; ?>" type="radio" value="4" name="3_general-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_general-ans<?php echo $counter; ?>" type="radio" value="3" name="3_general-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_general-ans<?php echo $counter; ?>" type="radio" value="2" name="3_general-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_general-ans<?php echo $counter; ?>" type="radio" value="1" name="3_general-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
 	<br>
 <?php } ?>
 
-
+ -->
 
 <!-- ============= registrarship ================= -->
 <?php
@@ -50,17 +78,25 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Admission & Registrarship</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
+	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -74,10 +110,22 @@
 	<tr>
 		<td class="reg-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
 		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="5" name="registrarship-ans<?php echo $counter; ?>"></td>
-		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="4" name="ans<?php echo $counter; ?>"></td>
-		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="3" name="ans<?php echo $counter; ?>"></td>
-		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="2" name="ans<?php echo $counter; ?>"></td>
-		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="1" name="ans<?php echo $counter; ?>"></td>
+		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="4" name="registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="3" name="registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="2" name="registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="registrarship-ans<?php echo $counter; ?>" type="radio" value="1" name="registrarship-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_registrarship-ans<?php echo $counter; ?>" type="radio" value="5" name="2_registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_registrarship-ans<?php echo $counter; ?>" type="radio" value="4" name="2_registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_registrarship-ans<?php echo $counter; ?>" type="radio" value="3" name="2_registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_registrarship-ans<?php echo $counter; ?>" type="radio" value="2" name="2_registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_registrarship-ans<?php echo $counter; ?>" type="radio" value="1" name="2_registrarship-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_registrarship-ans<?php echo $counter; ?>" type="radio" value="5" name="3_registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_registrarship-ans<?php echo $counter; ?>" type="radio" value="4" name="3_registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_registrarship-ans<?php echo $counter; ?>" type="radio" value="3" name="3_registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_registrarship-ans<?php echo $counter; ?>" type="radio" value="2" name="3_registrarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_registrarship-ans<?php echo $counter; ?>" type="radio" value="1" name="3_registrarship-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -95,17 +143,19 @@
 	if($resp->num_rows > 0){
 ?>
 	<h4><b>Alumni Affairs & Placement</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -123,6 +173,18 @@
 		<td><input class="alumni-ans<?php echo $counter; ?>" type="radio" value="3" name="alumni-ans<?php echo $counter; ?>"></td>
 		<td><input class="alumni-ans<?php echo $counter; ?>" type="radio" value="2" name="alumni-ans<?php echo $counter; ?>"></td>
 		<td><input class="alumni-ans<?php echo $counter; ?>" type="radio" value="1" name="alumni-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_alumni-ans<?php echo $counter; ?>" type="radio" value="5" name="2_alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_alumni-ans<?php echo $counter; ?>" type="radio" value="4" name="2_alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_alumni-ans<?php echo $counter; ?>" type="radio" value="3" name="2_alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_alumni-ans<?php echo $counter; ?>" type="radio" value="2" name="2_alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_alumni-ans<?php echo $counter; ?>" type="radio" value="1" name="2_alumni-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_alumni-ans<?php echo $counter; ?>" type="radio" value="5" name="3_alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_alumni-ans<?php echo $counter; ?>" type="radio" value="4" name="3_alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_alumni-ans<?php echo $counter; ?>" type="radio" value="3" name="3_alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_alumni-ans<?php echo $counter; ?>" type="radio" value="2" name="3_alumni-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_alumni-ans<?php echo $counter; ?>" type="radio" value="1" name="3_alumni-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -139,17 +201,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Administration</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -162,11 +226,23 @@
 ?>
 	<tr>
 		<td class="adm-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="administration-ans<?php echo $counter; ?>" type="radio" value="5" name="administration-ans<?php echo $counter; ?>"></td>
-		<td><input class="administration-ans<?php echo $counter; ?>" type="radio" value="4" name="administration-ans<?php echo $counter; ?>"></td>
-		<td><input class="administration-ans<?php echo $counter; ?>" type="radio" value="3" name="administration-ans<?php echo $counter; ?>"></td>
-		<td><input class="administration-ans<?php echo $counter; ?>" type="radio" value="2" name="administration-ans<?php echo $counter; ?>"></td>
-		<td><input class="administration-ans<?php echo $counter; ?>" type="radio" value="1" name="administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_administration-ans<?php echo $counter; ?>" type="radio" value="5" name="1_administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_administration-ans<?php echo $counter; ?>" type="radio" value="4" name="1_administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_administration-ans<?php echo $counter; ?>" type="radio" value="3" name="1_administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_administration-ans<?php echo $counter; ?>" type="radio" value="2" name="1_administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_administration-ans<?php echo $counter; ?>" type="radio" value="1" name="1_administration-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_administration-ans<?php echo $counter; ?>" type="radio" value="5" name="2_administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_administration-ans<?php echo $counter; ?>" type="radio" value="4" name="2_administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_administration-ans<?php echo $counter; ?>" type="radio" value="3" name="2_administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_administration-ans<?php echo $counter; ?>" type="radio" value="2" name="2_administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_administration-ans<?php echo $counter; ?>" type="radio" value="1" name="2_administration-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_administration-ans<?php echo $counter; ?>" type="radio" value="5" name="3_administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_administration-ans<?php echo $counter; ?>" type="radio" value="4" name="3_administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_administration-ans<?php echo $counter; ?>" type="radio" value="3" name="3_administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_administration-ans<?php echo $counter; ?>" type="radio" value="2" name="3_administration-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_administration-ans<?php echo $counter; ?>" type="radio" value="1" name="3_administration-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -183,17 +259,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Accounting Office</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -206,11 +284,23 @@
 ?>
 	<tr>
 		<td class="acc-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="accounting-ans<?php echo $counter; ?>" type="radio" value="5" name="accounting-ans<?php echo $counter; ?>"></td>
-		<td><input class="accounting-ans<?php echo $counter; ?>" type="radio" value="4" name="accounting-ans<?php echo $counter; ?>"></td>
-		<td><input class="accounting-ans<?php echo $counter; ?>" type="radio" value="3" name="accounting-ans<?php echo $counter; ?>"></td>
-		<td><input class="accounting-ans<?php echo $counter; ?>" type="radio" value="2" name="accounting-ans<?php echo $counter; ?>"></td>
-		<td><input class="accounting-ans<?php echo $counter; ?>" type="radio" value="1" name="accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_accounting-ans<?php echo $counter; ?>" type="radio" value="5" name="1_accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_accounting-ans<?php echo $counter; ?>" type="radio" value="4" name="1_accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_accounting-ans<?php echo $counter; ?>" type="radio" value="3" name="1_accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_accounting-ans<?php echo $counter; ?>" type="radio" value="2" name="1_accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_accounting-ans<?php echo $counter; ?>" type="radio" value="1" name="1_accounting-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_accounting-ans<?php echo $counter; ?>" type="radio" value="5" name="2_accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_accounting-ans<?php echo $counter; ?>" type="radio" value="4" name="2_accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_accounting-ans<?php echo $counter; ?>" type="radio" value="3" name="2_accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_accounting-ans<?php echo $counter; ?>" type="radio" value="2" name="2_accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_accounting-ans<?php echo $counter; ?>" type="radio" value="1" name="2_accounting-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_accounting-ans<?php echo $counter; ?>" type="radio" value="5" name="3_accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_accounting-ans<?php echo $counter; ?>" type="radio" value="4" name="3_accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_accounting-ans<?php echo $counter; ?>" type="radio" value="3" name="3_accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_accounting-ans<?php echo $counter; ?>" type="radio" value="2" name="3_accounting-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_accounting-ans<?php echo $counter; ?>" type="radio" value="1" name="3_accounting-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -227,17 +317,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Business Affairs Office</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -250,11 +342,23 @@
 ?>
 	<tr>
 		<td class="bus-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="business-ans<?php echo $counter; ?>" type="radio" value="5" name="business-ans<?php echo $counter; ?>"></td>
-		<td><input class="business-ans<?php echo $counter; ?>" type="radio" value="4" name="business-ans<?php echo $counter; ?>"></td>
-		<td><input class="business-ans<?php echo $counter; ?>" type="radio" value="3" name="business-ans<?php echo $counter; ?>"></td>
-		<td><input class="business-ans<?php echo $counter; ?>" type="radio" value="2" name="business-ans<?php echo $counter; ?>"></td>
-		<td><input class="business-ans<?php echo $counter; ?>" type="radio" value="1" name="business-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_business-ans<?php echo $counter; ?>" type="radio" value="5" name="1_business-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_business-ans<?php echo $counter; ?>" type="radio" value="4" name="1_business-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_business-ans<?php echo $counter; ?>" type="radio" value="3" name="1_business-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_business-ans<?php echo $counter; ?>" type="radio" value="2" name="1_business-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_business-ans<?php echo $counter; ?>" type="radio" value="1" name="1_business-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_business-ans<?php echo $counter; ?>" type="radio" value="5" name="2_business-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_business-ans<?php echo $counter; ?>" type="radio" value="4" name="2_business-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_business-ans<?php echo $counter; ?>" type="radio" value="3" name="2_business-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_business-ans<?php echo $counter; ?>" type="radio" value="2" name="2_business-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_business-ans<?php echo $counter; ?>" type="radio" value="1" name="2_business-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_business-ans<?php echo $counter; ?>" type="radio" value="5" name="3_business-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_business-ans<?php echo $counter; ?>" type="radio" value="4" name="3_business-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_business-ans<?php echo $counter; ?>" type="radio" value="3" name="3_business-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_business-ans<?php echo $counter; ?>" type="radio" value="2" name="3_business-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_business-ans<?php echo $counter; ?>" type="radio" value="1" name="3_business-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -271,17 +375,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Cashier's Office</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -294,11 +400,23 @@
 ?>
 	<tr>
 		<td class="cas-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="cashier-ans<?php echo $counter; ?>" type="radio" value="5" name="cashier-ans<?php echo $counter; ?>"></td>
-		<td><input class="cashier-ans<?php echo $counter; ?>" type="radio" value="4" name="cashier-ans<?php echo $counter; ?>"></td>
-		<td><input class="cashier-ans<?php echo $counter; ?>" type="radio" value="3" name="cashier-ans<?php echo $counter; ?>"></td>
-		<td><input class="cashier-ans<?php echo $counter; ?>" type="radio" value="2" name="cashier-ans<?php echo $counter; ?>"></td>
-		<td><input class="cashier-ans<?php echo $counter; ?>" type="radio" value="1" name="cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_cashier-ans<?php echo $counter; ?>" type="radio" value="5" name="1_cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_cashier-ans<?php echo $counter; ?>" type="radio" value="4" name="1_cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_cashier-ans<?php echo $counter; ?>" type="radio" value="3" name="1_cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_cashier-ans<?php echo $counter; ?>" type="radio" value="2" name="1_cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_cashier-ans<?php echo $counter; ?>" type="radio" value="1" name="1_cashier-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_cashier-ans<?php echo $counter; ?>" type="radio" value="5" name="2_cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_cashier-ans<?php echo $counter; ?>" type="radio" value="4" name="2_cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_cashier-ans<?php echo $counter; ?>" type="radio" value="3" name="2_cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_cashier-ans<?php echo $counter; ?>" type="radio" value="2" name="2_cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_cashier-ans<?php echo $counter; ?>" type="radio" value="1" name="2_cashier-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_cashier-ans<?php echo $counter; ?>" type="radio" value="5" name="3_cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_cashier-ans<?php echo $counter; ?>" type="radio" value="4" name="3_cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_cashier-ans<?php echo $counter; ?>" type="radio" value="3" name="3_cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_cashier-ans<?php echo $counter; ?>" type="radio" value="2" name="3_cashier-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_cashier-ans<?php echo $counter; ?>" type="radio" value="1" name="3_cashier-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -315,17 +433,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Clinic</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -338,11 +458,23 @@
 ?>
 	<tr>
 		<td class="cli-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="clinic-ans<?php echo $counter; ?>" type="radio" value="5" name="ans<?php echo $counter; ?>"></td>
-		<td><input class="clinic-ans<?php echo $counter; ?>" type="radio" value="4" name="ans<?php echo $counter; ?>"></td>
-		<td><input class="clinic-ans<?php echo $counter; ?>" type="radio" value="3" name="ans<?php echo $counter; ?>"></td>
-		<td><input class="clinic-ans<?php echo $counter; ?>" type="radio" value="2" name="ans<?php echo $counter; ?>"></td>
-		<td><input class="clinic-ans<?php echo $counter; ?>" type="radio" value="1" name="ans<?php echo $counter; ?>"></td>
+		<td><input class="1_clinic-ans<?php echo $counter; ?>" type="radio" value="5" name="1_clinic-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_clinic-ans<?php echo $counter; ?>" type="radio" value="4" name="1_clinic-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_clinic-ans<?php echo $counter; ?>" type="radio" value="3" name="1_clinic-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_clinic-ans<?php echo $counter; ?>" type="radio" value="2" name="1_clinic-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_clinic-ans<?php echo $counter; ?>" type="radio" value="1" name="1_clinic-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_clinic-ans<?php echo $counter; ?>" type="radio" value="5" name="2_clinic-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_clinic-ans<?php echo $counter; ?>" type="radio" value="4" name="2_clinic-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_clinic-ans<?php echo $counter; ?>" type="radio" value="3" name="2_clinic-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_clinic-ans<?php echo $counter; ?>" type="radio" value="2" name="2_clinic-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_clinic-ans<?php echo $counter; ?>" type="radio" value="1" name="2_clinic-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_clinic-ans<?php echo $counter; ?>" type="radio" value="5" name="3_clinic-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_clinic-ans<?php echo $counter; ?>" type="radio" value="4" name="3_clinic-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_clinic-ans<?php echo $counter; ?>" type="radio" value="3" name="3_clinic-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_clinic-ans<?php echo $counter; ?>" type="radio" value="2" name="3_clinic-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_clinic-ans<?php echo $counter; ?>" type="radio" value="1" name="3_clinic-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -359,17 +491,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Extension & Training</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -382,11 +516,24 @@
 ?>
 	<tr>
 		<td class="ext-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="extension-ans<?php echo $counter; ?>" type="radio" value="5" name="extension-ans<?php echo $counter; ?>"></td>
-		<td><input class="extension-ans<?php echo $counter; ?>" type="radio" value="4" name="extension-ans<?php echo $counter; ?>"></td>
-		<td><input class="extension-ans<?php echo $counter; ?>" type="radio" value="3" name="extension-ans<?php echo $counter; ?>"></td>
-		<td><input class="extension-ans<?php echo $counter; ?>" type="radio" value="2" name="extension-ans<?php echo $counter; ?>"></td>
-		<td><input class="extension-ans<?php echo $counter; ?>" type="radio" value="1" name="extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_extension-ans<?php echo $counter; ?>" type="radio" value="5" name="1_extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_extension-ans<?php echo $counter; ?>" type="radio" value="4" name="1_extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_extension-ans<?php echo $counter; ?>" type="radio" value="3" name="1_extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_extension-ans<?php echo $counter; ?>" type="radio" value="2" name="1_extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_extension-ans<?php echo $counter; ?>" type="radio" value="1" name="1_extension-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_extension-ans<?php echo $counter; ?>" type="radio" value="5" name="2_extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_extension-ans<?php echo $counter; ?>" type="radio" value="4" name="2_extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_extension-ans<?php echo $counter; ?>" type="radio" value="3" name="2_extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_extension-ans<?php echo $counter; ?>" type="radio" value="2" name="2_extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_extension-ans<?php echo $counter; ?>" type="radio" value="1" name="2_extension-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_extension-ans<?php echo $counter; ?>" type="radio" value="5" name="3_extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_extension-ans<?php echo $counter; ?>" type="radio" value="4" name="3_extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_extension-ans<?php echo $counter; ?>" type="radio" value="3" name="3_extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_extension-ans<?php echo $counter; ?>" type="radio" value="2" name="3_extension-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_extension-ans<?php echo $counter; ?>" type="radio" value="1" name="3_extension-ans<?php echo $counter; ?>"></td>
+
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -403,17 +550,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Gender & Development</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -426,11 +575,23 @@
 ?>
 	<tr>
 		<td class="gend-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="gender-ans<?php echo $counter; ?>" type="radio" value="5" name="gender-ans<?php echo $counter; ?>"></td>
-		<td><input class="gender-ans<?php echo $counter; ?>" type="radio" value="4" name="gender-ans<?php echo $counter; ?>"></td>
-		<td><input class="gender-ans<?php echo $counter; ?>" type="radio" value="3" name="gender-ans<?php echo $counter; ?>"></td>
-		<td><input class="gender-ans<?php echo $counter; ?>" type="radio" value="2" name="gender-ans<?php echo $counter; ?>"></td>
-		<td><input class="gender-ans<?php echo $counter; ?>" type="radio" value="1" name="gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_gender-ans<?php echo $counter; ?>" type="radio" value="5" name="1_gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_gender-ans<?php echo $counter; ?>" type="radio" value="4" name="1_gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_gender-ans<?php echo $counter; ?>" type="radio" value="3" name="1_gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_gender-ans<?php echo $counter; ?>" type="radio" value="2" name="1_gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_gender-ans<?php echo $counter; ?>" type="radio" value="1" name="1_gender-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_gender-ans<?php echo $counter; ?>" type="radio" value="5" name="2_gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_gender-ans<?php echo $counter; ?>" type="radio" value="4" name="2_gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_gender-ans<?php echo $counter; ?>" type="radio" value="3" name="2_gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_gender-ans<?php echo $counter; ?>" type="radio" value="2" name="2_gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_gender-ans<?php echo $counter; ?>" type="radio" value="1" name="2_gender-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_gender-ans<?php echo $counter; ?>" type="radio" value="5" name="3_gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_gender-ans<?php echo $counter; ?>" type="radio" value="4" name="3_gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_gender-ans<?php echo $counter; ?>" type="radio" value="3" name="3_gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_gender-ans<?php echo $counter; ?>" type="radio" value="2" name="3_gender-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_gender-ans<?php echo $counter; ?>" type="radio" value="1" name="3_gender-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -447,17 +608,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Guidance Counseling</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -470,11 +633,23 @@
 ?>
 	<tr>
 		<td class="gui-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="guidance-ans<?php echo $counter; ?>" type="radio" value="5" name="guidance-ans<?php echo $counter; ?>"></td>
-		<td><input class="guidance-ans<?php echo $counter; ?>" type="radio" value="4" name="guidance-ans<?php echo $counter; ?>"></td>
-		<td><input class="guidance-ans<?php echo $counter; ?>" type="radio" value="3" name="guidance-ans<?php echo $counter; ?>"></td>
-		<td><input class="guidance-ans<?php echo $counter; ?>" type="radio" value="2" name="guidance-ans<?php echo $counter; ?>"></td>
-		<td><input class="guidance-ans<?php echo $counter; ?>" type="radio" value="1" name="guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_guidance-ans<?php echo $counter; ?>" type="radio" value="5" name="1_guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_guidance-ans<?php echo $counter; ?>" type="radio" value="4" name="1_guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_guidance-ans<?php echo $counter; ?>" type="radio" value="3" name="1_guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_guidance-ans<?php echo $counter; ?>" type="radio" value="2" name="1_guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_guidance-ans<?php echo $counter; ?>" type="radio" value="1" name="1_guidance-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_guidance-ans<?php echo $counter; ?>" type="radio" value="5" name="2_guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_guidance-ans<?php echo $counter; ?>" type="radio" value="4" name="2_guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_guidance-ans<?php echo $counter; ?>" type="radio" value="3" name="2_guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_guidance-ans<?php echo $counter; ?>" type="radio" value="2" name="2_guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_guidance-ans<?php echo $counter; ?>" type="radio" value="1" name="2_guidance-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_guidance-ans<?php echo $counter; ?>" type="radio" value="5" name="3_guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_guidance-ans<?php echo $counter; ?>" type="radio" value="4" name="3_guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_guidance-ans<?php echo $counter; ?>" type="radio" value="3" name="3_guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_guidance-ans<?php echo $counter; ?>" type="radio" value="2" name="3_guidance-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_guidance-ans<?php echo $counter; ?>" type="radio" value="1" name="3_guidance-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -491,17 +666,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>ICTS</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -514,11 +691,23 @@
 ?>
 	<tr>
 		<td class="ict-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="icts-ans<?php echo $counter; ?>" type="radio" value="5" name="icts-ans<?php echo $counter; ?>"></td>
-		<td><input class="icts-ans<?php echo $counter; ?>" type="radio" value="4" name="icts-ans<?php echo $counter; ?>"></td>
-		<td><input class="icts-ans<?php echo $counter; ?>" type="radio" value="3" name="icts-ans<?php echo $counter; ?>"></td>
-		<td><input class="icts-ans<?php echo $counter; ?>" type="radio" value="2" name="icts-ans<?php echo $counter; ?>"></td>
-		<td><input class="icts-ans<?php echo $counter; ?>" type="radio" value="1" name="icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_icts-ans<?php echo $counter; ?>" type="radio" value="5" name="1_icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_icts-ans<?php echo $counter; ?>" type="radio" value="4" name="1_icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_icts-ans<?php echo $counter; ?>" type="radio" value="3" name="1_icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_icts-ans<?php echo $counter; ?>" type="radio" value="2" name="1_icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_icts-ans<?php echo $counter; ?>" type="radio" value="1" name="1_icts-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_icts-ans<?php echo $counter; ?>" type="radio" value="5" name="2_icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_icts-ans<?php echo $counter; ?>" type="radio" value="4" name="2_icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_icts-ans<?php echo $counter; ?>" type="radio" value="3" name="2_icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_icts-ans<?php echo $counter; ?>" type="radio" value="2" name="2_icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_icts-ans<?php echo $counter; ?>" type="radio" value="1" name="2_icts-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_icts-ans<?php echo $counter; ?>" type="radio" value="5" name="3_icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_icts-ans<?php echo $counter; ?>" type="radio" value="4" name="3_icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_icts-ans<?php echo $counter; ?>" type="radio" value="3" name="3_icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_icts-ans<?php echo $counter; ?>" type="radio" value="2" name="3_icts-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_icts-ans<?php echo $counter; ?>" type="radio" value="1" name="3_icts-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -535,17 +724,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Library</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -558,11 +749,23 @@
 ?>
 	<tr>
 		<td class="lib-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="library-ans<?php echo $counter; ?>" type="radio" value="5" name="library-ans<?php echo $counter; ?>"></td>
-		<td><input class="library-ans<?php echo $counter; ?>" type="radio" value="4" name="library-ans<?php echo $counter; ?>"></td>
-		<td><input class="library-ans<?php echo $counter; ?>" type="radio" value="3" name="library-ans<?php echo $counter; ?>"></td>
-		<td><input class="library-ans<?php echo $counter; ?>" type="radio" value="2" name="library-ans<?php echo $counter; ?>"></td>
-		<td><input class="library-ans<?php echo $counter; ?>" type="radio" value="1" name="library-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_library-ans<?php echo $counter; ?>" type="radio" value="5" name="1_library-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_library-ans<?php echo $counter; ?>" type="radio" value="4" name="1_library-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_library-ans<?php echo $counter; ?>" type="radio" value="3" name="1_library-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_library-ans<?php echo $counter; ?>" type="radio" value="2" name="1_library-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_library-ans<?php echo $counter; ?>" type="radio" value="1" name="1_library-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_library-ans<?php echo $counter; ?>" type="radio" value="5" name="2_library-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_library-ans<?php echo $counter; ?>" type="radio" value="4" name="2_library-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_library-ans<?php echo $counter; ?>" type="radio" value="3" name="2_library-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_library-ans<?php echo $counter; ?>" type="radio" value="2" name="2_library-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_library-ans<?php echo $counter; ?>" type="radio" value="1" name="2_library-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_library-ans<?php echo $counter; ?>" type="radio" value="5" name="3_library-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_library-ans<?php echo $counter; ?>" type="radio" value="4" name="3_library-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_library-ans<?php echo $counter; ?>" type="radio" value="3" name="3_library-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_library-ans<?php echo $counter; ?>" type="radio" value="2" name="3_library-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_library-ans<?php echo $counter; ?>" type="radio" value="1" name="3_library-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -579,17 +782,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Guidance Counseling</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -602,11 +807,23 @@
 ?>
 	<tr>
 		<td class="nst-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="nstp-ans<?php echo $counter; ?>" type="radio" value="5" name="nstp-ans<?php echo $counter; ?>"></td>
-		<td><input class="nstp-ans<?php echo $counter; ?>" type="radio" value="4" name="nstp-ans<?php echo $counter; ?>"></td>
-		<td><input class="nstp-ans<?php echo $counter; ?>" type="radio" value="3" name="nstp-ans<?php echo $counter; ?>"></td>
-		<td><input class="nstp-ans<?php echo $counter; ?>" type="radio" value="2" name="nstp-ans<?php echo $counter; ?>"></td>
-		<td><input class="nstp-ans<?php echo $counter; ?>" type="radio" value="1" name="nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_nstp-ans<?php echo $counter; ?>" type="radio" value="5" name="1_nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_nstp-ans<?php echo $counter; ?>" type="radio" value="4" name="1_nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_nstp-ans<?php echo $counter; ?>" type="radio" value="3" name="1_nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_nstp-ans<?php echo $counter; ?>" type="radio" value="2" name="1_nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_nstp-ans<?php echo $counter; ?>" type="radio" value="1" name="1_nstp-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_nstp-ans<?php echo $counter; ?>" type="radio" value="5" name="2_nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_nstp-ans<?php echo $counter; ?>" type="radio" value="4" name="2_nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_nstp-ans<?php echo $counter; ?>" type="radio" value="3" name="2_nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_nstp-ans<?php echo $counter; ?>" type="radio" value="2" name="2_nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_nstp-ans<?php echo $counter; ?>" type="radio" value="1" name="2_nstp-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_nstp-ans<?php echo $counter; ?>" type="radio" value="5" name="3_nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_nstp-ans<?php echo $counter; ?>" type="radio" value="4" name="3_nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_nstp-ans<?php echo $counter; ?>" type="radio" value="3" name="3_nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_nstp-ans<?php echo $counter; ?>" type="radio" value="2" name="3_nstp-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_nstp-ans<?php echo $counter; ?>" type="radio" value="1" name="3_nstp-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -624,16 +841,18 @@
 ?>
 	<h4><b>Physical Plant</b></h4>
 	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -646,11 +865,23 @@
 ?>
 	<tr>
 		<td class="phy-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="physical-ans<?php echo $counter; ?>" type="radio" value="5" name="physica-ans<?php echo $counter; ?>"></td>
-		<td><input class="physical-ans<?php echo $counter; ?>" type="radio" value="4" name="physica-ans<?php echo $counter; ?>"></td>
-		<td><input class="physical-ans<?php echo $counter; ?>" type="radio" value="3" name="physica-ans<?php echo $counter; ?>"></td>
-		<td><input class="physical-ans<?php echo $counter; ?>" type="radio" value="2" name="physica-ans<?php echo $counter; ?>"></td>
-		<td><input class="physical-ans<?php echo $counter; ?>" type="radio" value="1" name="physica-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_physical-ans<?php echo $counter; ?>" type="radio" value="5" name="1_physical-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_physical-ans<?php echo $counter; ?>" type="radio" value="4" name="1_physical-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_physical-ans<?php echo $counter; ?>" type="radio" value="3" name="1_physical-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_physical-ans<?php echo $counter; ?>" type="radio" value="2" name="1_physical-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_physical-ans<?php echo $counter; ?>" type="radio" value="1" name="1_physical-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_physical-ans<?php echo $counter; ?>" type="radio" value="5" name="2_physical-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_physical-ans<?php echo $counter; ?>" type="radio" value="4" name="2_physical-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_physical-ans<?php echo $counter; ?>" type="radio" value="3" name="2_physical-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_physical-ans<?php echo $counter; ?>" type="radio" value="2" name="2_physical-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_physical-ans<?php echo $counter; ?>" type="radio" value="1" name="2_physical-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_physical-ans<?php echo $counter; ?>" type="radio" value="5" name="3_physical-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_physical-ans<?php echo $counter; ?>" type="radio" value="4" name="3_physical-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_physical-ans<?php echo $counter; ?>" type="radio" value="3" name="3_physical-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_physical-ans<?php echo $counter; ?>" type="radio" value="2" name="3_physical-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_physical-ans<?php echo $counter; ?>" type="radio" value="1" name="3_physical-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -668,16 +899,18 @@
 ?>
 	<h4><b>Research & Development</b></h4>
 	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -690,11 +923,23 @@
 ?>
 	<tr>
 		<td class="res-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="research-ans<?php echo $counter; ?>" type="radio" value="5" name="research-ans<?php echo $counter; ?>"></td>
-		<td><input class="research-ans<?php echo $counter; ?>" type="radio" value="4" name="research-ans<?php echo $counter; ?>"></td>
-		<td><input class="research-ans<?php echo $counter; ?>" type="radio" value="3" name="research-ans<?php echo $counter; ?>"></td>
-		<td><input class="research-ans<?php echo $counter; ?>" type="radio" value="2" name="research-ans<?php echo $counter; ?>"></td>
-		<td><input class="research-ans<?php echo $counter; ?>" type="radio" value="1" name="research-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_research-ans<?php echo $counter; ?>" type="radio" value="5" name="1_research-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_research-ans<?php echo $counter; ?>" type="radio" value="4" name="1_research-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_research-ans<?php echo $counter; ?>" type="radio" value="3" name="1_research-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_research-ans<?php echo $counter; ?>" type="radio" value="2" name="1_research-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_research-ans<?php echo $counter; ?>" type="radio" value="1" name="1_research-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_research-ans<?php echo $counter; ?>" type="radio" value="5" name="2_research-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_research-ans<?php echo $counter; ?>" type="radio" value="4" name="2_research-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_research-ans<?php echo $counter; ?>" type="radio" value="3" name="2_research-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_research-ans<?php echo $counter; ?>" type="radio" value="2" name="2_research-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_research-ans<?php echo $counter; ?>" type="radio" value="1" name="2_research-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_research-ans<?php echo $counter; ?>" type="radio" value="5" name="3_research-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_research-ans<?php echo $counter; ?>" type="radio" value="4" name="3_research-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_research-ans<?php echo $counter; ?>" type="radio" value="3" name="3_research-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_research-ans<?php echo $counter; ?>" type="radio" value="2" name="3_research-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_research-ans<?php echo $counter; ?>" type="radio" value="1" name="3_research-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -711,17 +956,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Scholarship</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -734,11 +981,23 @@
 ?>
 	<tr>
 		<td class="sch-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="scholarship-ans<?php echo $counter; ?>" type="radio" value="5" name="scholarship-ans<?php echo $counter; ?>"></td>
-		<td><input class="scholarship-ans<?php echo $counter; ?>" type="radio" value="4" name="scholarship-ans<?php echo $counter; ?>"></td>
-		<td><input class="scholarship-ans<?php echo $counter; ?>" type="radio" value="3" name="scholarship-ans<?php echo $counter; ?>"></td>
-		<td><input class="scholarship-ans<?php echo $counter; ?>" type="radio" value="2" name="scholarship-ans<?php echo $counter; ?>"></td>
-		<td><input class="scholarship-ans<?php echo $counter; ?>" type="radio" value="1" name="scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_scholarship-ans<?php echo $counter; ?>" type="radio" value="5" name="1_scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_scholarship-ans<?php echo $counter; ?>" type="radio" value="4" name="1_scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_scholarship-ans<?php echo $counter; ?>" type="radio" value="3" name="1_scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_scholarship-ans<?php echo $counter; ?>" type="radio" value="2" name="1_scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_scholarship-ans<?php echo $counter; ?>" type="radio" value="1" name="1_scholarship-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_scholarship-ans<?php echo $counter; ?>" type="radio" value="5" name="2_scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_scholarship-ans<?php echo $counter; ?>" type="radio" value="4" name="2_scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_scholarship-ans<?php echo $counter; ?>" type="radio" value="3" name="2_scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_scholarship-ans<?php echo $counter; ?>" type="radio" value="2" name="2_scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_scholarship-ans<?php echo $counter; ?>" type="radio" value="1" name="2_scholarship-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_scholarship-ans<?php echo $counter; ?>" type="radio" value="5" name="3_scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_scholarship-ans<?php echo $counter; ?>" type="radio" value="4" name="3_scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_scholarship-ans<?php echo $counter; ?>" type="radio" value="3" name="3_scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_scholarship-ans<?php echo $counter; ?>" type="radio" value="2" name="3_scholarship-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_scholarship-ans<?php echo $counter; ?>" type="radio" value="1" name="3_scholarship-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
@@ -755,17 +1014,19 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Student Affairs (OSAS)</b></h4>
-	<table class="table">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
+	<table class="table table-bordered tbl-style">
 	<tr>
 		<th></th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
 		<th>5</th>
 		<th>4</th>
 		<th>3</th>
@@ -778,11 +1039,23 @@
 ?>
 	<tr>
 		<td class="stu-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="student-ans<?php echo $counter; ?>" type="radio" value="5" name="student-ans<?php echo $counter; ?>"></td>
-		<td><input class="student-ans<?php echo $counter; ?>" type="radio" value="4" name="student-ans<?php echo $counter; ?>"></td>
-		<td><input class="student-ans<?php echo $counter; ?>" type="radio" value="3" name="student-ans<?php echo $counter; ?>"></td>
-		<td><input class="student-ans<?php echo $counter; ?>" type="radio" value="2" name="student-ans<?php echo $counter; ?>"></td>
-		<td><input class="student-ans<?php echo $counter; ?>" type="radio" value="1" name="student-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_student-ans<?php echo $counter; ?>" type="radio" value="5" name="1_student-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_student-ans<?php echo $counter; ?>" type="radio" value="4" name="1_student-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_student-ans<?php echo $counter; ?>" type="radio" value="3" name="1_student-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_student-ans<?php echo $counter; ?>" type="radio" value="2" name="1_student-ans<?php echo $counter; ?>"></td>
+		<td><input class="1_student-ans<?php echo $counter; ?>" type="radio" value="1" name="1_student-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="2_student-ans<?php echo $counter; ?>" type="radio" value="5" name="2_student-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_student-ans<?php echo $counter; ?>" type="radio" value="4" name="2_student-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_student-ans<?php echo $counter; ?>" type="radio" value="3" name="2_student-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_student-ans<?php echo $counter; ?>" type="radio" value="2" name="2_student-ans<?php echo $counter; ?>"></td>
+		<td><input class="2_student-ans<?php echo $counter; ?>" type="radio" value="1" name="2_student-ans<?php echo $counter; ?>"></td>
+
+		<td><input class="3_student-ans<?php echo $counter; ?>" type="radio" value="5" name="3_student-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_student-ans<?php echo $counter; ?>" type="radio" value="4" name="3_student-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_student-ans<?php echo $counter; ?>" type="radio" value="3" name="3_student-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_student-ans<?php echo $counter; ?>" type="radio" value="2" name="3_student-ans<?php echo $counter; ?>"></td>
+		<td><input class="3_student-ans<?php echo $counter; ?>" type="radio" value="1" name="3_student-ans<?php echo $counter; ?>"></td>
 	</tr>
 <?php $counter++; } ?>
 	</table>
