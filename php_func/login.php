@@ -5,7 +5,7 @@
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-	$query = "Select * from tbl_user where username='".$username."' and password='".$password."'";
+	$query = "Select * from tbl_user where id_num='".$username."' and password='".$password."'";
 
 	$response = @mysqli_query($dbc, $query);
 	$row = mysqli_fetch_array($response);

@@ -3,7 +3,7 @@
 	session_start();
 
 	if(isset($_SESSION['username']) && !empty($_SESSION['username']) && $_SESSION['user_type'] =='admin'){
-		$query = "Select * from tbl_user where username='".$_SESSION['username']."'";
+		$query = "Select * from tbl_user where id_num='".$_SESSION['username']."'";
 
 		$response = @mysqli_query($dbc, $query);
 		$row = mysqli_fetch_array($response);

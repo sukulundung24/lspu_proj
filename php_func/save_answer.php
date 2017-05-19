@@ -10,11 +10,11 @@
 		$dataLength = count($data);
 
 		for($i=0; $i<$dataLength; $i++){
-			$query = "INSERT INTO tbl_answer (username,question_id,answer) VALUES(?,?,?)";
+			$query = "INSERT INTO tbl_answer (username,question_id,answer,answer2,answer3) VALUES(?,?,?,?,?)";
 			$stmt = mysqli_prepare($dbc,$query);
 
 			// (sssssssss) means 9 string data types.
-			mysqli_stmt_bind_param($stmt,"sii",$username,$data[$i]['quest_id'],$data[$i]['answer']);
+			mysqli_stmt_bind_param($stmt,"siiii",$username,$data[$i]['quest_id'],$data[$i]['answer1'],$data[$i]['answer2'],$data[$i]['answer3']);
 
 			mysqli_stmt_execute($stmt);
 

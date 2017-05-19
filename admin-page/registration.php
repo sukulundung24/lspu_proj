@@ -33,75 +33,90 @@
 						</div>
 		    			<form class="form-horizontal">
 		    				<div class="form-group">
+								<label for="txt_type" class="col-md-3 control-label">User Type:</label>
+								<div class="col-md-8">
+									<select id="txt_type" onchange="usertypealert()" class="form-control" name="type">
+										<option value="admin">Admin</option>
+										<option value="student">Student</option>
+										<option value="employee">Employee</option>
+									</select>
+								</div>
+							</div>
+
+		    				<div class="form-group general-info">
 								<label for="txt_fname" class="col-md-3 control-label">First Name:</label>
 								<div class="col-md-8">
 									<input id="txt_fname" class="form-control" type="text" name="fname">
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group general-info">
 								<label for="txt_mname" class="col-md-3 control-label">Middle Name:</label>
 								<div class="col-md-8">
 									<input id="txt_mname" class="form-control" type="text" name="mname">
 								</div>
 							</div>
 
-							<div class="form-group">
+							<div class="form-group general-info">
 								<label for="txt_lname" class="col-md-3 control-label">Last Name:</label>
 								<div class="col-md-8">
 									<input id="txt_lname" class="form-control" type="text" name="lname">
 								</div>
 							</div>
 
-							<div class="form-group">
-								<label for="txt_office" class="col-md-3 control-label">Unit/Office:</label>
-								<div class="col-md-8">
-									<input id="txt_office" class="form-control" type="text" name="office">
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="txt_position" class="col-md-3 control-label">Position:</label>
-								<div class="col-md-8">
-									<input id="txt_position" class="form-control" type="text" name="position">
-								</div>
-							</div>
-
-							<div class="form-group">
+							<div class="form-group general-info">
 								<label for="txt_idnum" class="col-md-3 control-label">ID Number:</label>
 								<div class="col-md-8">
 									<input id="txt_idnum" class="form-control" type="text" name="id_num">
 								</div>
 							</div>
 
-							<div class="form-group">
-								<label for="txt_username" class="col-md-3 control-label">Username:</label>
+							<div class="form-group general-info">
+								<label for="txt_age" class="col-md-3 control-label">Age:</label>
 								<div class="col-md-8">
-									<input id="txt_username" class="form-control" type="text" name="username">
+									<input id="txt_age" class="form-control" type="text" name="age">
 								</div>
 							</div>
 
-							<div class="form-group">
-								<label for="txt_password" class="col-md-3 control-label">Password:</label>
+							<div class="form-group general-info">
+								<label for="txt_gender" class="col-md-3 control-label">Gender:</label>
 								<div class="col-md-8">
-									<input id="txt_password" class="form-control" type="password" name="password">
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="txt_confirm_password" class="col-md-3 control-label">Confirm Password:</label>
-								<div class="col-md-8">
-									<input id="txt_confirm_password" class="form-control" type="password" name="confirm_password">
-								</div>
-							</div>
-
-							<div class="form-group">
-								<label for="txt_type" class="col-md-3 control-label">User Type:</label>
-								<div class="col-md-8">
-									<select id="txt_type" class="form-control" name="type">
-										<option value="admin">Admin</option>
-										<option value="student">Student</option>
+									<select id="txt_gender" class="form-control" name="gender">
+										<option value="male">Male</option>
+										<option value="female">Female</option>
 									</select>
+								</div>
+							</div>
+
+							<div class="form-group general-info">
+								<label for="txt_address" class="col-md-3 control-label">Address:</label>
+								<div class="col-md-8">
+									<textarea id="txt_address" class="form-control" type="text" name="address"></textarea>
+								</div>
+							</div>
+
+							<div class="form-group general-info">
+								<label for="txt_status" class="col-md-3 control-label">Status:</label>
+								<div class="col-md-8">
+									<select id="txt_status" class="form-control" name="status">
+										<option value="study-work">Studying/Working</option>
+										<option value="graduate-resign">Graduate/resign</option>
+										<option value="drop-kickout">Drop/Kickout</option>
+									</select>
+								</div>
+							</div> 
+
+							<div class="form-group employee-info">
+								<label for="txt_office" class="col-md-3 control-label">Unit/Office:</label>
+								<div class="col-md-8">
+									<input id="txt_office" class="form-control" type="text" name="office">
+								</div>
+							</div>
+
+							<div class="form-group employee-info">
+								<label for="txt_position" class="col-md-3 control-label">Position:</label>
+								<div class="col-md-8">
+									<input id="txt_position" class="form-control" type="text" name="position">
 								</div>
 							</div>
 
@@ -120,5 +135,13 @@
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/function.js"></script>
+	<script type="text/javascript">
+		function usertypealert(){
+			var cur_val = $('#txt_type').val();
+			if(cur_val=="student"){
+				
+			}
+		}
+	</script>
 </body>
 </html>

@@ -30,7 +30,7 @@
 				</div>
 				<form class="form-horizontal">
 					<div class="form-group">
-						<label for="txt_username" class="col-md-3 control-label">Username:</label>
+						<label for="txt_username" class="col-md-3 control-label">ID Number:</label>
 						<div class="col-md-8">
 							<input id="txt_username" class="form-control" type="text" name="username">
 						</div>

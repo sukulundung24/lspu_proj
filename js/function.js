@@ -88,9 +88,9 @@ $(document).ready(function(){
 	})
 
 	$('.del-question').on('click',function(e){
+		e.preventDefault();
 		var service_type = $('.del-question').data("type");
-		var dataid = $('.del-question').data("id");
-
+		var dataid = $(this).data("id");
 		$.post('../php_func/delete_question.php',
 		{
 			id: dataid
@@ -141,11 +141,17 @@ $(document).ready(function(){
 
 		//================ registrarship ==============
 		$('.reg-input').each(function(i){
-			var name = '.registrarship-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
-				data.push({	
-					answer:data_answer,
+			var name1 = '.1_registrarship-ans'+(i+1);
+			var name2 = '.2_registrarship-ans'+(i+1);
+			var name3 = '.3_registrarship-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
+				data.push({
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -153,11 +159,17 @@ $(document).ready(function(){
 
 		//=============== alumni ==============
 		$('.alu-input').each(function(i){
-			var name = '.alumni-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_alumni-ans'+(i+1);
+			var name2 = '.2_alumni-ans'+(i+1);
+			var name3 = '.3_alumni-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val()
+			var data_answer3 = $(name3+':checked').val()
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -165,11 +177,17 @@ $(document).ready(function(){
 
 		//============== administration ==========
 		$('.adm-input').each(function(i){
-			var name = '.administration-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_administration-ans'+(i+1);
+			var name2 = '.2_administration-ans'+(i+1);
+			var name3 = '.3_administration-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -177,11 +195,17 @@ $(document).ready(function(){
 
 		//============== Accounting =================
 		$('.acc-input').each(function(i){
-			var name = '.accounting-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_accounting-ans'+(i+1);
+			var name2 = '.2_accounting-ans'+(i+1);
+			var name3 = '.3_accounting-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -189,11 +213,17 @@ $(document).ready(function(){
 
 		//============= Business =================
 		$('.bus-input').each(function(i){
-			var name = '.business-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_business-ans'+(i+1);
+			var name2 = '.2_business-ans'+(i+1);
+			var name3 = '.3_business-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -201,11 +231,17 @@ $(document).ready(function(){
 
 		//========== Cashier ===========
 		$('.cas-input').each(function(i){
-			var name = '.cashier-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_cashier-ans'+(i+1);
+			var name2 = '.2_cashier-ans'+(i+1);
+			var name3 = '.3_cashier-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -213,11 +249,17 @@ $(document).ready(function(){
 
 		//=========== clinic =============
 		$('.cli-input').each(function(i){
-			var name = '.clinic-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_clinic-ans'+(i+1);
+			var name2 = '.2_clinic-ans'+(i+1);
+			var name3 = '.3_clinic-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -225,11 +267,17 @@ $(document).ready(function(){
 
 		//============== Extension =================
 		$('.ext-input').each(function(i){
-			var name = '.extension-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_extension-ans'+(i+1);
+			var name2 = '.2_extension-ans'+(i+1);
+			var name3 = '.3_extension-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -237,11 +285,17 @@ $(document).ready(function(){
 
 		//=============== gender ==============
 		$('.gend-input').each(function(i){
-			var name = '.gender-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_gender-ans'+(i+1);
+			var name2 = '.2_gender-ans'+(i+1);
+			var name3 = '.3_gender-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -249,11 +303,17 @@ $(document).ready(function(){
 
 		//============== Guidance ============ 
 		$('.gui-input').each(function(i){
-			var name = '.guidance-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_guidance-ans'+(i+1);
+			var name2 = '.2_guidance-ans'+(i+1);
+			var name3 = '.3_guidance-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -261,11 +321,17 @@ $(document).ready(function(){
 
 		// ================  ICTS  ===================
 		$('.ict-input').each(function(i){
-			var name = '.icts-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_icts-ans'+(i+1);
+			var name2 = '.2_icts-ans'+(i+1);
+			var name3 = '.3_icts-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -273,11 +339,17 @@ $(document).ready(function(){
 
 		//============= Library ==============
 		$('.lib-input').each(function(i){
-			var name = '.library-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_library-ans'+(i+1);
+			var name2 = '.2_library-ans'+(i+1);
+			var name3 = '.3_library-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -285,11 +357,17 @@ $(document).ready(function(){
 
 		//============ NSTP =============
 		$('.nst-input').each(function(i){
-			var name = '.nstp-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_nstp-ans'+(i+1);
+			var name2 = '.2_nstp-ans'+(i+1);
+			var name3 = '.3_nstp-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -297,11 +375,17 @@ $(document).ready(function(){
 
 		//============= Physical ===============
 		$('.phy-input').each(function(i){
-			var name = '.physical-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_physical-ans'+(i+1);
+			var name2 = '.2_physical-ans'+(i+1);
+			var name3 = '.3_physical-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -309,11 +393,17 @@ $(document).ready(function(){
 
 		//============= research ==============
 		$('.res-input').each(function(i){
-			var name = '.research-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_research-ans'+(i+1);
+			var name2 = '.2_research-ans'+(i+1);
+			var name3 = '.3_research-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -321,11 +411,17 @@ $(document).ready(function(){
 
 		//============== Scholarship ===========
 		$('.sch-input').each(function(i){
-			var name = '.scholarship-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_scholarship-ans'+(i+1);
+			var name2 = '.2_scholarship-ans'+(i+1);
+			var name3 = '.3_scholarship-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
@@ -333,11 +429,17 @@ $(document).ready(function(){
 
 		//============== Student ==========
 		$('.stu-input').each(function(i){
-			var name = '.student-ans'+(i+1);
-			var data_answer = $(name+':checked').val()
-			if(data_answer){
+			var name1 = '.1_student-ans'+(i+1);
+			var name2 = '.2_student-ans'+(i+1);
+			var name3 = '.3_student-ans'+(i+1);
+			var data_answer1 = $(name1+':checked').val();
+			var data_answer2 = $(name2+':checked').val();
+			var data_answer3 = $(name3+':checked').val();
+			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({	
-					answer:data_answer,
+					answer1:data_answer1,
+					answer2:data_answer2,
+					answer3:data_answer3,
 					quest_id: $(this).data("id")
 				})
 			}
