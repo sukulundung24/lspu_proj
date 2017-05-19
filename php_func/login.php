@@ -5,16 +5,25 @@
 	$username = $_POST['username'];
 	$password = $_POST['password'];
 
-	$query = "Select * from tbl_user where id_num='".$username."' and password='".$password."'";
+	$checkQuery = "Select * from tbl_user where id_num='".$username."'";
+	$resp = @mysqli_query($dbc, $checkQuery);
+	while($checkRow=mysqli_fetch_array($resp)){
 
-	$response = @mysqli_query($dbc, $query);
-	$row = mysqli_fetch_array($response);
+		if($checkRow['status']=="study-work" || $checkRow['type']=="admin"){
+			$query = "Select * from tbl_user where id_num='".$username."' and password='".$password."'";
 
-	if($row){
-		$_SESSION['username'] = $username;
-		$_SESSION['user_type'] = $row['type'];
-		echo $row['type'];
-	} else {
-		echo '';
+			$response = @mysqli_query($dbc, $query);
+			$row = mysqli_fetch_array($response);
+
+			if($row){
+				$_SESSION['username'] = $username;
+				$_SESSION['user_type'] = $row['type'];
+				echo $row['type'];
+			} else {
+				echo '';
+			}
+		}
+		
 	}
+	
 ?>

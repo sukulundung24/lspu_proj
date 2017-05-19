@@ -16,7 +16,7 @@ $(document).ready(function(){
 				location.href="student-page/dashboard.php";
 			} else {
 				$('#login_error').show();
-				$('#error_message').text('Invalid Username/password');
+				$('#error_message').text('Invalid Username/password or you are not yet registered.');
 				setTimeout(function(){ $('#login_error').hide(); }, 3000);
 			}
 		})

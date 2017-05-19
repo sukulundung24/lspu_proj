@@ -10,32 +10,51 @@
 	$id_num = $_POST['id_num'];
 	$office = $_POST['office'];
 	$position = $_POST['position'];
-	$username = $_POST['username'];
 	$password = $_POST['password'];
+	$age = $_POST['age'];
+	$gender = $_POST['gender'];
+	$address = $_POST['address'];
+	$status = $_POST['status'];
+	$department = $_POST['department'];
+	$course = $_POST['course'];
+	$yrlvl = $_POST['yrlvl'];
+	$sem = $_POST['sem'];
+	$academic_year = $_POST['academic_year'];
+	$office = $_POST['office'];
+	$position = $_POST['position'];
 
-	if($fname && $mname && $lname && $user_type && $c_password && $user_type && $id_num && $office && $position && $username && $password){
+	if($fname && $mname && $lname && $user_type && $c_password && $user_type && $id_num && $password){
 		if($password == $c_password){
-			$query = "Select * from tbl_user where username='".$username."' ";
+			$query = "Select * from tbl_user where id_num='".$id_num."' ";
 			$response = @mysqli_query($dbc, $query);
 
 			if($response->num_rows >0){
-				echo "Username already taken!";
+				echo "Already registered!";
 			} else {
-				$query = "INSERT INTO tbl_user (username,password,fname,mname,lname,type,id_num,office,position) VALUES(?,?,?,?,?,?,?,?,?)";
-				$stmt = mysqli_prepare($dbc,$query);
+				$checkQuery = "Select * from tbl_id_number where id_num='".$id_num."'";
+				$checkResponse = @mysqli_query($dbc,$checkQuery);
+				if($checkResponse->num_rows >0 || $user_type == 'admin'){
+					$query = "INSERT INTO tbl_user (password,fname,mname,lname,type,id_num,office,position,age,sex,address,course,year_level,status,college,semester,academic_yr) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+					$stmt = mysqli_prepare($dbc,$query);
 
-				// (sssssssss) means 9 string data types.
-				mysqli_stmt_bind_param($stmt,"sssssssss",$username,$password,$fname,$mname,$lname,$user_type,$id_num,$office,$position);
+					// (sssssssss) means 9 string data types.
+					mysqli_stmt_bind_param($stmt,"ssssssssisssisssi",$password,$fname,$mname,$lname,$user_type,$id_num,$office,$position,$age,$gender,$address,$course,$yrlvl,$status,$department,$sem,$academic_year);
 
-				mysqli_stmt_execute($stmt);
-				$affected_rows = mysqli_stmt_affected_rows($stmt);
-				if($affected_rows==1){
-					echo "success";
-					mysqli_stmt_close($stmt);
-					mysqli_close($dbc);
+					mysqli_stmt_execute($stmt);
+					$affected_rows = mysqli_stmt_affected_rows($stmt);
+					if($affected_rows==1){
+						echo "success";
+						mysqli_stmt_close($stmt);
+						mysqli_close($dbc);
+						
+					} else {
+						echo "Error occured. (".mysqli_error().")";
+					}
 				} else {
-					echo "Error occured. (".mysqli_error().")";
+					echo 'Invalid ID number!';
 				}
+
+				
 			}
 		} else {
 			echo "Password didn't match!";

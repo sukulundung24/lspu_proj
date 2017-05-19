@@ -12,7 +12,7 @@
     <div class="navbar-collapse collapse sidebar-navbar-collapse">
       <ul class="nav navbar-nav">
         <li style="text-align:center;"><h4>SERVICES</h4></li>
-        <li><a href="service-general.php">General</a></li>
+        <!-- <li><a href="service-general.php">General</a></li> -->
         <li><a href="service-registrarship.php">Admision & Registrarship</a></li>
         <li><a href="service-alumni.php">Alumni Affairs & Placement</a></li>
         <li><a href="service-administration.php">Administration</a></li>

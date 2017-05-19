@@ -44,7 +44,8 @@
 					</div>
 					<div class="form-group">
 					    <div class="col-md-offset-3 col-md-8">
-					    	<button id="btn_login" type="button" class="btn btn-default">Sign in</button>
+					    	<button id="btn_login" type="button" class="btn btn-success">Sign in</button>
+					    	<a type="button" href="register.php" class="btn btn-primary">Register</a>
 					    </div>
 					</div>
 
@@ -56,5 +57,6 @@
 	<script type="text/javascript" src="js/jquery.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/function.js"></script>
+	
 </body>
 </html>
