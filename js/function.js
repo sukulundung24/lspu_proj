@@ -451,8 +451,9 @@ $(document).ready(function(){
 			data: data,
 		},
 		function(data){
+			alert(data)
 			if(data=="success"){
-				href.location = "dashboard.php";
+				location.href = "dashboard.php";
 			}
 		})
 

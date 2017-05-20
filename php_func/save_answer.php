@@ -22,9 +22,52 @@
 			if(($i+1) == $dataLength){
 				// $affected_rows = mysqli_stmt_affected_rows($stmt);
 				if($affected_rows>0){
+					
+					$checkQuery = "Select * from student_survey_status where id_num = '".$_SESSION['username']."' ";
+
+	        		$respChecker = @mysqli_query($dbc, $checkQuery);
+        			if($respChecker->num_rows>0){
+        				while($rowChecker=mysqli_fetch_array($respChecker)){
+        					if($rowChecker['status']=="not finish"){
+        						$updateQuery = "UPDATE student_survey_status SET status = ? where id_num = '".$_SESSION['username']."'";
+
+        						$stmt = mysqli_prepare($dbc,$updateQuery);
+        						$updateStatus = "finish";
+								mysqli_stmt_bind_param($stmt,"s",$updateStatus);
+
+								mysqli_stmt_execute($stmt);
+								$affected_rows = mysqli_stmt_affected_rows($stmt);
+
+								if($affected_rows==1){
+									mysqli_close($dbc);
+								}
+								
+        					}
+        				}
+        			} else {
+        				$insertQuery = "INSERT INTO student_survey_status (id_num,status) VALUES(?,?)";
+
+						$stmt = mysqli_prepare($dbc,$insertQuery);
+						$updateStatus = "finish";
+						mysqli_stmt_bind_param($stmt,"ss",$_SESSION['username'],$updateStatus);
+
+						mysqli_stmt_execute($stmt);
+						$affected_rows = mysqli_stmt_affected_rows($stmt);
+
+						if($affected_rows==1){
+							mysqli_close($dbc);
+						}
+        			}
+
+
+
 					echo "success";
-					mysqli_stmt_close($stmt);
-					mysqli_close($dbc);
+					// mysqli_stmt_close($stmt);
+					// mysqli_close($dbc);
+
+				
+
+
 				} else {
 					echo "Error occured. (".mysqli_error().")";
 				}

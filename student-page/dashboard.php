@@ -14,7 +14,53 @@
 		include('partial/header.php');
 		include('partial/nav-top.php');
 	?>
+	<?php 
+		$query = "Select * from tbl_sem_schedule";
+        $resp = @mysqli_query($dbc, $query);
+        if($resp->num_rows>0){
+	        while($row=mysqli_fetch_array($resp)){
+	        	if((date("m")==$row['1st_sem_month'] && date("d")==$row['1st_sem_date']) || (date("m")==$row['2nd_sem_month'] && date("d")==$row['2nd_sem_date'])){
 
+	        		$checkQuery = "Select * from student_survey_status where id_num = '".$_SESSION['username']."' ";
+
+	        		$respChecker = @mysqli_query($dbc, $checkQuery);
+        			if($resp->num_rows>0){
+        				while($rowChecker=mysqli_fetch_array($respChecker)){
+        					if($rowChecker['status']=="finish"){
+        						$updateQuery = "UPDATE student_survey_status SET status = ? where id_num = '".$_SESSION['username']."'";
+
+        						$stmt = mysqli_prepare($dbc,$updateQuery);
+        						$updateStatus = "not finish";
+								mysqli_stmt_bind_param($stmt,"s",$updateStatus);
+
+								mysqli_stmt_execute($stmt);
+								$affected_rows = mysqli_stmt_affected_rows($stmt);
+
+								if($affected_rows==1){
+									mysqli_close($dbc);
+								}
+								
+        					}
+        				}
+        			} else {
+        				$insertQuery = "INSERT INTO student_survey_status (id_num,status) VALUES(?,?)";
+
+						$stmt = mysqli_prepare($dbc,$insertQuery);
+						$updateStatus = "not finish";
+						mysqli_stmt_bind_param($stmt,"ss",$_SESSION['username'],$updateStatus);
+
+						mysqli_stmt_execute($stmt);
+						$affected_rows = mysqli_stmt_affected_rows($stmt);
+
+						if($affected_rows==1){
+							mysqli_close($dbc);
+						}
+        			}
+	        	}
+	        }	
+	    }
+
+	?>
 		<div class="row">
 		  <div class="col-sm-3">
 		  	<?php include('partial/nav-left.php'); ?>
