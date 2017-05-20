@@ -147,6 +147,7 @@ $(document).ready(function(){
 			var data_answer1 = $(name1+':checked').val();
 			var data_answer2 = $(name2+':checked').val();
 			var data_answer3 = $(name3+':checked').val();
+			console.log($(this).data("id"));
 			if(data_answer1 && data_answer2 && data_answer3){
 				data.push({
 					answer1:data_answer1,
@@ -450,7 +451,9 @@ $(document).ready(function(){
 			data: data,
 		},
 		function(data){
-			console.log(data);
+			if(data=="success"){
+				href.location = "dashboard.php";
+			}
 		})
 
 	})
@@ -476,6 +479,19 @@ $(document).ready(function(){
 		$('.general-service').show();
 		$('#next-survey').show();
 
+	})
+
+	$('#btn_save_sem_sched').on('click',function(e){
+		e.preventDefault();
+		$.post('../php_func/save_sched.php',
+		{
+			date1: $('#txt_first_date').val(),
+			month1: $('#txt_first_month').val(),
+			date2: $('#txt_second_date').val(),
+			month2: $('#txt_second_month').val()
+		},function(data){
+			console.log(data);
+		})
 	})
 
 });
