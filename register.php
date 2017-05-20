@@ -41,7 +41,6 @@
 								<label for="txt_type" class="col-md-3 control-label">User Type:</label>
 								<div class="col-md-8">
 									<select id="txt_type" onchange="usertypealert()" class="form-control" name="type">
-										<option value="admin">Admin</option>
 										<option value="student">Student</option>
 										<option value="employee">Employee</option>
 									</select>
