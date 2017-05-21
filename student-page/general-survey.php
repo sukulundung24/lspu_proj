@@ -502,6 +502,26 @@
 
 	<tr>
 		<td><b></b></td>
+		<td> &nbsp; &nbsp; &nbsp; &nbsp; F. Internet Services</td>
+		<td><input class="1_internet_input" type="radio" value="5" name="1_internet_input"></td>
+		<td><input class="1_internet_input" type="radio" value="4" name="1_internet_input"></td>
+		<td><input class="1_internet_input" type="radio" value="3" name="1_internet_input"></td>
+		<td><input class="1_internet_input" type="radio" value="2" name="1_internet_input"></td>
+		<td><input class="1_internet_input" type="radio" value="1" name="1_internet_input"></td>
+		<td><input class="1_internet_input" type="radio" value="0" name="1_internet_input"></td>
+
+		<td><input class="2_internet_input" type="radio" value="5" name="2_internet_input"></td>
+		<td><input class="2_internet_input" type="radio" value="4" name="2_internet_input"></td>
+		<td><input class="2_internet_input" type="radio" value="3" name="2_internet_input"></td>
+		<td><input class="2_internet_input" type="radio" value="2" name="2_internet_input"></td>
+		<td><input class="2_internet_input" type="radio" value="1" name="2_internet_input"></td>
+		<td><input class="2_internet_input" type="radio" value="0" name="2_internet_input"></td>
+
+		<td><input type="text" name="internet_remark" class="internet_remark"></td>
+	</tr>
+
+	<tr>
+		<td><b></b></td>
 		<td> &nbsp; &nbsp; &nbsp; &nbsp; G. Seminar/ Training halls </td>
 		<td><input class="1_seminar_input" type="radio" value="5" name="1_seminar_input"></td>
 		<td><input class="1_seminar_input" type="radio" value="4" name="1_seminar_input"></td>

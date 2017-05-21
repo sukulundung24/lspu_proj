@@ -42,6 +42,14 @@
 
 					mysqli_stmt_execute($stmt);
 					$affected_rows = mysqli_stmt_affected_rows($stmt);
+					if($user_type!="admin"){
+						$query2 = "INSERT INTO student_survey_status (id_num,status) VALUES(?,?)";
+						$stmt2 = mysqli_prepare($dbc,$query2);
+						$statusSurvey = 'not finish';
+						mysqli_stmt_bind_param($stmt2,'ss',$id_num,$statusSurvey);
+						mysqli_stmt_execute($stmt2);
+					}
+					
 					if($affected_rows==1){
 						echo "success";
 						mysqli_stmt_close($stmt);

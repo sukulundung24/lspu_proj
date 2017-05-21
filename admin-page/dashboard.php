@@ -28,6 +28,10 @@
 		    <div class="row" style="margin-top:30px;">
 		    	<div class="col-md-12">
 		    		<div class="content-holder">
+		    		<img class="cover-dash" src="../img/mission.png">
+		    		<br>
+		    		<br>
+					<img class="cover-dash" src="../img/vision.png">
 		    			<h4><b>AUTOMATED CLIENTELE SATISFACTION SURVEY EVALUATION AND ANALYSIS</b></h4>
 		    			<br>
 		    			<p><b>What is the name of the research poster?</b></p>
