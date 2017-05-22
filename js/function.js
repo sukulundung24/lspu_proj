@@ -451,9 +451,11 @@ $(document).ready(function(){
 			data: data,
 		},
 		function(data){
-			alert(data)
 			if(data=="success"){
+				alert("You have successfully filled out the survey!");
 				location.href = "dashboard.php";
+			} else {
+				alert("There's something wrong!");
 			}
 		})
 

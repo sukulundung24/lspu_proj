@@ -25,7 +25,7 @@
 		    		<div class="content-holder">
 		    			<div class="row">
 		    				<div class="col-md-6">
-		    					<h3 style="margin:10px 0;">Alumni Affairs & Placement Question List</h3>
+		    					<h3 style="margin:10px 0;">Alumni Affairs & Placement Survey</h3>
 		    				</div>
 		    				<div class="col-md-6">
 		    					<a href="add-question.php?service_type=alumni" class="btn btn-success addbtn"><i class="glyphicon glyphicon-plus"></i> Add</a>

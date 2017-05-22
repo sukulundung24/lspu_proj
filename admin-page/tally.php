@@ -90,7 +90,6 @@
 					category: cur
 				},
 				function(datas){
-					alert(datas);
 					var arrData = JSON.parse(datas);
 					var arrColor = [];
 					alert(arrData.length);

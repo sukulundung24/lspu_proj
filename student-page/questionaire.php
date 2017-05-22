@@ -1,74 +1,5 @@
 <!-- ============= General ================= -->
-<!-- <?php
-	$query = "Select * from tbl_question where service_type ='general'";
 
-	$resp = @mysqli_query($dbc, $query);
-	if($resp->num_rows >0){
-?>
-	<h4><b>General</b></h4>
-	<table class="table table-bordered tbl-style">
-	<colgroup>
-        <col class="col-md-7">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-        <col class="col-md-1">
-    </colgroup>
-    <tr>
-    	<th colspan="1">Question</th>
-    	<th colspan="5" style="text-align:center;">Promptness of Services</th>
-    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
-    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
-    </tr>
-	<tr>
-		<th></th>
-		<th>5</th>
-		<th>4</th>
-		<th>3</th>
-		<th>2</th>
-		<th>1</th>
-		<th>5</th>
-		<th>4</th>
-		<th>3</th>
-		<th>2</th>
-		<th>1</th>
-		<th>5</th>
-		<th>4</th>
-		<th>3</th>
-		<th>2</th>
-		<th>1</th>
-	</tr>
-<?php	
-		$counter = 1;
-		while($row=mysqli_fetch_array($resp)){
-?>
-	<tr>
-		<td class="gen-input" data-id="<?php echo $row['id'] ?>"><?php echo $row['question'] ?></td>
-		<td><input class="general-ans<?php echo $counter; ?>" type="radio" value="5" name="general-ans<?php echo $counter; ?>"></td>
-		<td><input class="general-ans<?php echo $counter; ?>" type="radio" value="4" name="general-ans<?php echo $counter; ?>"></td>
-		<td><input class="general-ans<?php echo $counter; ?>" type="radio" value="3" name="general-ans<?php echo $counter; ?>"></td>
-		<td><input class="general-ans<?php echo $counter; ?>" type="radio" value="2" name="general-ans<?php echo $counter; ?>"></td>
-		<td><input class="general-ans<?php echo $counter; ?>" type="radio" value="1" name="general-ans<?php echo $counter; ?>"></td>
-
-		<td><input class="2_general-ans<?php echo $counter; ?>" type="radio" value="5" name="2_general-ans<?php echo $counter; ?>"></td>
-		<td><input class="2_general-ans<?php echo $counter; ?>" type="radio" value="4" name="2_general-ans<?php echo $counter; ?>"></td>
-		<td><input class="2_general-ans<?php echo $counter; ?>" type="radio" value="3" name="2_general-ans<?php echo $counter; ?>"></td>
-		<td><input class="2_general-ans<?php echo $counter; ?>" type="radio" value="2" name="2_general-ans<?php echo $counter; ?>"></td>
-		<td><input class="2_general-ans<?php echo $counter; ?>" type="radio" value="1" name="2_general-ans<?php echo $counter; ?>"></td>
-
-		<td><input class="3_general-ans<?php echo $counter; ?>" type="radio" value="5" name="3_general-ans<?php echo $counter; ?>"></td>
-		<td><input class="3_general-ans<?php echo $counter; ?>" type="radio" value="4" name="3_general-ans<?php echo $counter; ?>"></td>
-		<td><input class="3_general-ans<?php echo $counter; ?>" type="radio" value="3" name="3_general-ans<?php echo $counter; ?>"></td>
-		<td><input class="3_general-ans<?php echo $counter; ?>" type="radio" value="2" name="3_general-ans<?php echo $counter; ?>"></td>
-		<td><input class="3_general-ans<?php echo $counter; ?>" type="radio" value="1" name="3_general-ans<?php echo $counter; ?>"></td>
-	</tr>
-<?php $counter++; } ?>
-	</table>
-	<br>
-<?php } ?>
-
- -->
 
 <!-- ============= registrarship ================= -->
 <?php
@@ -145,6 +76,12 @@
 	<h4><b>Alumni Affairs & Placement</b></h4>
 	<table class="table table-bordered tbl-style">
 	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
+	<tr>
 		<th></th>
 		<th>5</th>
 		<th>4</th>
@@ -202,6 +139,12 @@
 ?>
 	<h4><b>Administration</b></h4>
 	<table class="table table-bordered tbl-style">
+	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
 	<tr>
 		<th></th>
 		<th>5</th>
@@ -261,6 +204,12 @@
 	<h4><b>Accounting Office</b></h4>
 	<table class="table table-bordered tbl-style">
 	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
+	<tr>
 		<th></th>
 		<th>5</th>
 		<th>4</th>
@@ -318,6 +267,12 @@
 ?>
 	<h4><b>Business Affairs Office</b></h4>
 	<table class="table table-bordered tbl-style">
+	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
 	<tr>
 		<th></th>
 		<th>5</th>
@@ -377,6 +332,12 @@
 	<h4><b>Cashier's Office</b></h4>
 	<table class="table table-bordered tbl-style">
 	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
+	<tr>
 		<th></th>
 		<th>5</th>
 		<th>4</th>
@@ -435,6 +396,12 @@
 	<h4><b>Clinic</b></h4>
 	<table class="table table-bordered tbl-style">
 	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
+	<tr>
 		<th></th>
 		<th>5</th>
 		<th>4</th>
@@ -492,6 +459,12 @@
 ?>
 	<h4><b>Extension & Training</b></h4>
 	<table class="table table-bordered tbl-style">
+	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
 	<tr>
 		<th></th>
 		<th>5</th>
@@ -552,6 +525,12 @@
 	<h4><b>Gender & Development</b></h4>
 	<table class="table table-bordered tbl-style">
 	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
+	<tr>
 		<th></th>
 		<th>5</th>
 		<th>4</th>
@@ -609,6 +588,12 @@
 ?>
 	<h4><b>Guidance Counseling</b></h4>
 	<table class="table table-bordered tbl-style">
+	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
 	<tr>
 		<th></th>
 		<th>5</th>
@@ -668,6 +653,12 @@
 	<h4><b>ICTS</b></h4>
 	<table class="table table-bordered tbl-style">
 	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
+	<tr>
 		<th></th>
 		<th>5</th>
 		<th>4</th>
@@ -725,6 +716,12 @@
 ?>
 	<h4><b>Library</b></h4>
 	<table class="table table-bordered tbl-style">
+	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
 	<tr>
 		<th></th>
 		<th>5</th>
@@ -784,6 +781,12 @@
 	<h4><b>Guidance Counseling</b></h4>
 	<table class="table table-bordered tbl-style">
 	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
+	<tr>
 		<th></th>
 		<th>5</th>
 		<th>4</th>
@@ -840,7 +843,13 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Physical Plant</b></h4>
-	<table class="table">
+	<table class="table table-bordered tbl-style">
+	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
 	<tr>
 		<th></th>
 		<th>5</th>
@@ -898,7 +907,13 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Research & Development</b></h4>
-	<table class="table">
+	<table class="table table-bordered tbl-style">
+	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
 	<tr>
 		<th></th>
 		<th>5</th>
@@ -958,6 +973,12 @@
 	<h4><b>Scholarship</b></h4>
 	<table class="table table-bordered tbl-style">
 	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
+	<tr>
 		<th></th>
 		<th>5</th>
 		<th>4</th>
@@ -1015,6 +1036,12 @@
 ?>
 	<h4><b>Student Affairs (OSAS)</b></h4>
 	<table class="table table-bordered tbl-style">
+	<tr>
+		<th colspan="1"></th>
+		<th colspan="5" style="text-align:center;">Promptness of Services</th>
+    	<th colspan="5" style="text-align:center;">Courtesy of the Provider</th>
+    	<th colspan="5" style="text-align:center;">Quality of the Services</th>
+	</tr>
 	<tr>
 		<th></th>
 		<th>5</th>

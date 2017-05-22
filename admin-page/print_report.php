@@ -28,14 +28,19 @@
 		    			<div class="row">
 			    			<div class="col-md-4 col-md-offset-1">
 			    				<select class="form-control" id="print_category">
-			    					<option>test</option>
+			    					<option value="all">All Student</option>
+			    					<option value="gender">Gender</option>
+			    					<option value="course">Course</option>
+			    					<option value="year_level">Year Level</option>
+			    					<option value="college">College/Department</option>
 			    				</select>
 			    			</div>
 			    			<div class="col-md-3">
-			    				<button id="print" class="btn btn-success btn-block">Print</button>
+			    				<select id="print_column" class="form-control">
+			    				</select>
 			    			</div>
 			    			<div class="col-md-3">
-			    				<button id="download" class="btn btn-primary btn-block">Download</button>
+			    				<button id="print" class="btn btn-success btn-block">Print / Download</button>
 			    			</div>
 		    			</div>
 		    		</div>
@@ -51,8 +56,55 @@
 	<script type="text/javascript" src="../js/vfs_fonts.js"></script> -->
 	<script type="text/javascript" src="../js/function.js"></script>
 	<script type="text/javascript">
+	// alert($('#print_category').get[0].options[0].value);
+	$('#print_column').hide();
+	$('#print_category').on('change',function(){
+		var cur = $(this).val();
+		if(cur=='all'){
+			$('#print_column').hide();
+		} else {
+			$.post('../php_func/show_column.php',
+			{
+				column:cur
+			},function(data){
+				var arrData = JSON.parse(data);
+				arrData = arrData.filter((x,i,a)=>{return (a.indexOf(x)==i) && x});
+				var printColumn = document.getElementById("print_column");
+				
+				printColumn.options.length = 0;
+				// columnOptions =x {};
+				arrData.forEach((val,i)=>{
+					var option  = document.createElement("option");
+					option.text = val;
+					option.value = val;
+					printColumn.add(option);
+				})
+				$('#print_column').show();
+			})
+		}
+	})
+
 	$('#print').on('click',function(){
-		location.href = "report_student_list.php";
+		var printCategory = $('#print_category').val();
+		if(printCategory=="all"){
+			var win = window.open("report_student_list.php",'_blank');
+			win.focus();
+		} else {
+			var categoryVal = $('#print_category').val();
+			var categorySelected = null;
+			if(categoryVal == "gender"){
+				categorySelected = 'sex';
+			} else if(categoryVal=="course"){
+				categorySelected = 'course';
+			} else if(categoryVal == "year_level"){
+				categorySelected = 'year_level';
+			} else if(categoryVal == 'college'){
+				categorySelected = 'college';
+			}
+			var win = window.open("report_filtered.php?column="+categorySelected+"&data="+$('#print_column').val()+" ",'_blank');
+			win.focus();
+		}
+		
 	})
 	
 		// function getBase64FromImageUrl(url) {
