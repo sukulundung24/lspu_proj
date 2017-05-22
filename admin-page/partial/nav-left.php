@@ -36,6 +36,7 @@
         <li><a href="service-library.php">University Library</a></li>
         <li style="text-align:center;"><h4>REPORTS</h4></li>
         <li><a href="tally.php">Tally</a></li>
+        <li><a href="print_report.php">Print Report</a></li>
         <!-- <li><a href="#">Evaluation</a></li>
         <li><a href="#">Analysis</a></li>
         <li><a href="#">Administration</a></li> -->

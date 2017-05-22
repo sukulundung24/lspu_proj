@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>LSPU - Login</title>
+	<title>LSPU - Register</title>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
@@ -127,7 +127,15 @@
 							<div class="form-group student-info">
 								<label for="txt_department" class="col-md-3 control-label">Department:</label>
 								<div class="col-md-8">
-									<input type="text" id="txt_department" class="form-control">
+									<select id="txt_department" class="form-control">
+										<option value="CCIT">CCIT</option>
+										<option value="COE">COE</option>
+										<option value="CBA">CBA</option>
+										<option value="CAPS">CAPS</option>
+										<option value="CON">CON</option>
+										<option value="CAS">CAS</option>
+										<option value="COED">COED</option>
+									</select>
 								</div>
 							</div>
 
@@ -200,7 +208,6 @@
 	<script type="text/javascript" src="js/register.js"></script>
 	<script type="text/javascript">
 		$('.employee-info').hide();
-		$('.student-info').hide();
 		function usertypealert(){
 			var cur_val = $('#txt_type').val();
 			if(cur_val=="student"){

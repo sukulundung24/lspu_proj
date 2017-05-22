@@ -15,7 +15,6 @@
 	} else {
 		$column='year_level';
 	}
-
 	$checkQuery = "Select * from tbl_user where type <> 'admin' and status='study-work' ";
 	$resp = @mysqli_query($dbc, $checkQuery);
 	$data = [];

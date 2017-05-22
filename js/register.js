@@ -26,6 +26,8 @@ $(document).ready(function(){
 		},function(data){
 			if(data=="success"){
 				location.href="index.php";
+			} else {
+				alert(data);
 			}
 		})
 	})

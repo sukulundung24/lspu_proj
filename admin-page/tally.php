@@ -77,6 +77,10 @@
 				category: cur
 			},
 			function(data){
+				alert(data)
+				if(cur == "all"){
+					location.reload();
+				}
 				var ctx = $('#tally_chart');
 				var arr = JSON.parse(data);
 				arr.splice(0,1);
@@ -86,7 +90,19 @@
 					category: cur
 				},
 				function(datas){
+					alert(datas);
 					var arrData = JSON.parse(datas);
+					var arrColor = [];
+					alert(arrData.length);
+					for(var i=0;i<arrData.length; i++){
+						if((i%2)==0){
+							arrColor.push("#4fff69");
+						} else {
+							arrColor.push("#4fb8ff");
+						}
+					}
+					alert(arrColor.length);
+
 					var newChart = new Chart(ctx, {
 						type: 'bar',
 						data: {
@@ -94,7 +110,7 @@
 							datasets: [{
 								label: ['tally sheet'],
 								data: arrData,
-								backgroundColor: ['#4fff69','#4fb8ff']
+								backgroundColor: arrColor
 							}]
 						},
 						options: {

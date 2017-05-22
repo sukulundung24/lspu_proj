@@ -9,7 +9,7 @@
 	$column = null;
 	if($category=='gender'){
 		$column = 'sex';
-	}else if($category=='yaer_level'){
+	}else if($category=='year_level'){
 		$column='year_level';
 	} else if($category=='course'){
 		$column='course';
