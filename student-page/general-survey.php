@@ -63,7 +63,7 @@
 
 	<tr>
 		<td><b>III.</b></td>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; A. Guidance Services</td>
+		<td class="guidance-general">&nbsp; &nbsp; &nbsp; &nbsp; A. Guidance Services</td>
 		<td><input class="1_guidance_input" type="radio" value="5" name="1_guidance_input"></td>
 		<td><input class="1_guidance_input" type="radio" value="4" name="1_guidance_input"></td>
 		<td><input class="1_guidance_input" type="radio" value="3" name="1_guidance_input"></td>
@@ -83,7 +83,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  a. Admission Services</td>
+		<td class="admission-general">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  a. Admission Services</td>
 		<td><input class="1_admission_input" type="radio" value="5" name="1_admission_input"></td>
 		<td><input class="1_admission_input" type="radio" value="4" name="1_admission_input"></td>
 		<td><input class="1_admission_input" type="radio" value="3" name="1_admission_input"></td>
@@ -103,7 +103,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  b. Counseling Services</td>
+		<td class="counseling-general">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  b. Counseling Services</td>
 		<td><input class="1_counseling_input" type="radio" value="5" name="1_counseling_input"></td>
 		<td><input class="1_counseling_input" type="radio" value="4" name="1_counseling_input"></td>
 		<td><input class="1_counseling_input" type="radio" value="3" name="1_counseling_input"></td>
@@ -123,7 +123,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  c. Testing</td>
+		<td class="testing-general">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  c. Testing</td>
 		<td><input class="1_testing_input" type="radio" value="5" name="1_testing_input"></td>
 		<td><input class="1_testing_input" type="radio" value="4" name="1_testing_input"></td>
 		<td><input class="1_testing_input" type="radio" value="3" name="1_testing_input"></td>
@@ -143,7 +143,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; B. Medical Services</td>
+		<td class="medical-general">&nbsp; &nbsp; &nbsp; &nbsp; B. Medical Services</td>
 		<td><input class="1_medical_input" type="radio" value="5" name="1_medical_input"></td>
 		<td><input class="1_medical_input" type="radio" value="4" name="1_medical_input"></td>
 		<td><input class="1_medical_input" type="radio" value="3" name="1_medical_input"></td>
@@ -163,7 +163,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; C. Dental Services</td>
+		<td class="dental-general">&nbsp; &nbsp; &nbsp; &nbsp; C. Dental Services</td>
 		<td><input class="1_dental_input" type="radio" value="5" name="1_dental_input"></td>
 		<td><input class="1_dental_input" type="radio" value="4" name="1_dental_input"></td>
 		<td><input class="1_dental_input" type="radio" value="3" name="1_dental_input"></td>
@@ -182,7 +182,7 @@
 	</tr>
 	<tr>
 		<td><b></b></td>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; D. Campus Publication</td>
+		<td class="campus-general">&nbsp; &nbsp; &nbsp; &nbsp; D. Campus Publication</td>
 		<td><input class="1_campus_input" type="radio" value="5" name="1_campus_input"></td>
 		<td><input class="1_campus_input" type="radio" value="4" name="1_campus_input"></td>
 		<td><input class="1_campus_input" type="radio" value="3" name="1_campus_input"></td>
@@ -202,7 +202,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td>&nbsp; &nbsp; &nbsp; &nbsp; E. School Canteen</td>
+		<td class="canteen-general">&nbsp; &nbsp; &nbsp; &nbsp; E. School Canteen</td>
 		<td><input class="1_canteen_input" type="radio" value="5" name="1_canteen_input"></td>
 		<td><input class="1_canteen_input" type="radio" value="4" name="1_canteen_input"></td>
 		<td><input class="1_canteen_input" type="radio" value="3" name="1_canteen_input"></td>
@@ -222,7 +222,7 @@
 
 	<tr>
 		<td><b>IV.</b></td>
-		<td><b>Scholarship Program</b></td>
+		<td class="scholarship-general"><b>Scholarship Program</b></td>
 		<td><input class="1_scholarship_input" type="radio" value="5" name="1_scholarship_input"></td>
 		<td><input class="1_scholarship_input" type="radio" value="4" name="1_scholarship_input"></td>
 		<td><input class="1_scholarship_input" type="radio" value="3" name="1_scholarship_input"></td>
@@ -242,7 +242,7 @@
 
 	<tr>
 		<td><b>V.</b></td>
-		<td><b>Gender and Development (GAD)</b></td>
+		<td class='GAD-general'><b>Gender and Development (GAD)</b></td>
 		<td><input class="1_gender_input" type="radio" value="5" name="1_gender_input"></td>
 		<td><input class="1_gender_input" type="radio" value="4" name="1_gender_input"></td>
 		<td><input class="1_gender_input" type="radio" value="3" name="1_gender_input"></td>
@@ -262,7 +262,7 @@
 
 	<tr>
 		<td><b>VI.</b></td>
-		<td><b>Library Services</b></td>
+		<td class='library-general'><b>Library Services</b></td>
 		<td><input class="1_library_input" type="radio" value="5" name="1_library_input"></td>
 		<td><input class="1_library_input" type="radio" value="4" name="1_library_input"></td>
 		<td><input class="1_library_input" type="radio" value="3" name="1_library_input"></td>
@@ -282,7 +282,7 @@
 
 	<tr>
 		<td><b>VII.</b></td>
-		<td><b>Research Office</b></td>
+		<td class='research-general'><b>Research Office</b></td>
 		<td><input class="1_research_input" type="radio" value="5" name="1_research_input"></td>
 		<td><input class="1_research_input" type="radio" value="4" name="1_research_input"></td>
 		<td><input class="1_research_input" type="radio" value="3" name="1_research_input"></td>
@@ -302,7 +302,7 @@
 
 	<tr>
 		<td><b>VIII.</b></td>
-		<td><b>Cashier's Office</b></td>
+		<td class='cashier-general'><b>Cashier's Office</b></td>
 		<td><input class="1_cashier_input" type="radio" value="5" name="1_cashier_input"></td>
 		<td><input class="1_cashier_input" type="radio" value="4" name="1_cashier_input"></td>
 		<td><input class="1_cashier_input" type="radio" value="3" name="1_cashier_input"></td>
@@ -322,7 +322,7 @@
 
 	<tr>
 		<td><b>IX.</b></td>
-		<td><b>Budget & Finance / Accounting</b></td>
+		<td class="budget-general"><b>Budget & Finance / Accounting</b></td>
 		<td><input class="1_budget_input" type="radio" value="5" name="1_budget_input"></td>
 		<td><input class="1_budget_input" type="radio" value="4" name="1_budget_input"></td>
 		<td><input class="1_budget_input" type="radio" value="3" name="1_budget_input"></td>
@@ -342,7 +342,7 @@
 
 	<tr>
 		<td><b>X.</b></td>
-		<td><b>Security Services</b></td>
+		<td class='security-general'><b>Security Services</b></td>
 		<td><input class="1_security_input" type="radio" value="5" name="1_security_input"></td>
 		<td><input class="1_security_input" type="radio" value="4" name="1_security_input"></td>
 		<td><input class="1_security_input" type="radio" value="3" name="1_security_input"></td>
@@ -362,7 +362,7 @@
 
 	<tr>
 		<td><b>XI.</b></td>
-		<td><b>Infastructure/Utilities</b></td>
+		<td class='infastructure-general'><b>Infastructure/Utilities</b></td>
 		<td><input class="1_utilities_input" type="radio" value="5" name="1_utilities_input"></td>
 		<td><input class="1_utilities_input" type="radio" value="4" name="1_utilities_input"></td>
 		<td><input class="1_utilities_input" type="radio" value="3" name="1_utilities_input"></td>
@@ -382,7 +382,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td> &nbsp; &nbsp; &nbsp; &nbsp; A. Classroom</td>
+		<td class='classroom-general'> &nbsp; &nbsp; &nbsp; &nbsp; A. Classroom</td>
 		<td><input class="1_classroom_input" type="radio" value="5" name="1_classroom_input"></td>
 		<td><input class="1_classroom_input" type="radio" value="4" name="1_classroom_input"></td>
 		<td><input class="1_classroom_input" type="radio" value="3" name="1_classroom_input"></td>
@@ -402,7 +402,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td> &nbsp; &nbsp; &nbsp; &nbsp; B. Comfort Rooms</td>
+		<td class='comfort-general'> &nbsp; &nbsp; &nbsp; &nbsp; B. Comfort Rooms</td>
 		<td><input class="1_cr_input" type="radio" value="5" name="1_cr_input"></td>
 		<td><input class="1_cr_input" type="radio" value="4" name="1_cr_input"></td>
 		<td><input class="1_cr_input" type="radio" value="3" name="1_cr_input"></td>
@@ -422,7 +422,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td> &nbsp; &nbsp; &nbsp; &nbsp; C. Science Laboratory (Facilities & Equipment)</td>
+		<td class='science-general'> &nbsp; &nbsp; &nbsp; &nbsp; C. Science Laboratory (Facilities & Equipment)</td>
 		<td><input class="1_science_input" type="radio" value="5" name="1_science_input"></td>
 		<td><input class="1_science_input" type="radio" value="4" name="1_science_input"></td>
 		<td><input class="1_science_input" type="radio" value="3" name="1_science_input"></td>
@@ -442,27 +442,27 @@
 
 	<tr>
 		<td><b></b></td>
-		<td> &nbsp; &nbsp; &nbsp; &nbsp; D. Computer Laboratory and Equipment</td>
-		<td><input class="1_science_input" type="radio" value="5" name="1_science_input"></td>
-		<td><input class="1_science_input" type="radio" value="4" name="1_science_input"></td>
-		<td><input class="1_science_input" type="radio" value="3" name="1_science_input"></td>
-		<td><input class="1_science_input" type="radio" value="2" name="1_science_input"></td>
-		<td><input class="1_science_input" type="radio" value="1" name="1_science_input"></td>
-		<td><input class="1_science_input" type="radio" value="0" name="1_science_input"></td>
+		<td class='computer-general'> &nbsp; &nbsp; &nbsp; &nbsp; D. Computer Laboratory and Equipment</td>
+		<td><input class="1_computer_input" type="radio" value="5" name="1_computer_input"></td>
+		<td><input class="1_computer_input" type="radio" value="4" name="1_computer_input"></td>
+		<td><input class="1_computer_input" type="radio" value="3" name="1_computer_input"></td>
+		<td><input class="1_computer_input" type="radio" value="2" name="1_computer_input"></td>
+		<td><input class="1_computer_input" type="radio" value="1" name="1_computer_input"></td>
+		<td><input class="1_computer_input" type="radio" value="0" name="1_computer_input"></td>
 
-		<td><input class="2_science_input" type="radio" value="5" name="2_science_input"></td>
-		<td><input class="2_science_input" type="radio" value="4" name="2_science_input"></td>
-		<td><input class="2_science_input" type="radio" value="3" name="2_science_input"></td>
-		<td><input class="2_science_input" type="radio" value="2" name="2_science_input"></td>
-		<td><input class="2_science_input" type="radio" value="1" name="2_science_input"></td>
-		<td><input class="2_science_input" type="radio" value="0" name="2_science_input"></td>
+		<td><input class="2_computer_input" type="radio" value="5" name="2_computer_input"></td>
+		<td><input class="2_computer_input" type="radio" value="4" name="2_computer_input"></td>
+		<td><input class="2_computer_input" type="radio" value="3" name="2_computer_input"></td>
+		<td><input class="2_computer_input" type="radio" value="2" name="2_computer_input"></td>
+		<td><input class="2_computer_input" type="radio" value="1" name="2_computer_input"></td>
+		<td><input class="2_computer_input" type="radio" value="0" name="2_computer_input"></td>
 
-		<td><input type="text" name="science_remark" class="science_remark"></td>
+		<td><input type="text" name="computer_remark" class="computer_remark"></td>
 	</tr>
 
 	<tr>
 		<td><b></b></td>
-		<td> &nbsp; &nbsp; &nbsp; &nbsp; E. Business Affairs (BAO)</td>
+		<td class='BAO-general'> &nbsp; &nbsp; &nbsp; &nbsp; E. Business Affairs (BAO)</td>
 		<td><input class="1_business_input" type="radio" value="5" name="1_business_input"></td>
 		<td><input class="1_business_input" type="radio" value="4" name="1_business_input"></td>
 		<td><input class="1_business_input" type="radio" value="3" name="1_business_input"></td>
@@ -482,7 +482,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td> &nbsp; &nbsp; &nbsp; &nbsp; F. Internet Services</td>
+		<td class='internet-general'> &nbsp; &nbsp; &nbsp; &nbsp; F. Internet Services</td>
 		<td><input class="1_internet_input" type="radio" value="5" name="1_internet_input"></td>
 		<td><input class="1_internet_input" type="radio" value="4" name="1_internet_input"></td>
 		<td><input class="1_internet_input" type="radio" value="3" name="1_internet_input"></td>
@@ -502,27 +502,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td> &nbsp; &nbsp; &nbsp; &nbsp; F. Internet Services</td>
-		<td><input class="1_internet_input" type="radio" value="5" name="1_internet_input"></td>
-		<td><input class="1_internet_input" type="radio" value="4" name="1_internet_input"></td>
-		<td><input class="1_internet_input" type="radio" value="3" name="1_internet_input"></td>
-		<td><input class="1_internet_input" type="radio" value="2" name="1_internet_input"></td>
-		<td><input class="1_internet_input" type="radio" value="1" name="1_internet_input"></td>
-		<td><input class="1_internet_input" type="radio" value="0" name="1_internet_input"></td>
-
-		<td><input class="2_internet_input" type="radio" value="5" name="2_internet_input"></td>
-		<td><input class="2_internet_input" type="radio" value="4" name="2_internet_input"></td>
-		<td><input class="2_internet_input" type="radio" value="3" name="2_internet_input"></td>
-		<td><input class="2_internet_input" type="radio" value="2" name="2_internet_input"></td>
-		<td><input class="2_internet_input" type="radio" value="1" name="2_internet_input"></td>
-		<td><input class="2_internet_input" type="radio" value="0" name="2_internet_input"></td>
-
-		<td><input type="text" name="internet_remark" class="internet_remark"></td>
-	</tr>
-
-	<tr>
-		<td><b></b></td>
-		<td> &nbsp; &nbsp; &nbsp; &nbsp; G. Seminar/ Training halls </td>
+		<td class='seminar-general'> &nbsp; &nbsp; &nbsp; &nbsp; G. Seminar/ Training halls </td>
 		<td><input class="1_seminar_input" type="radio" value="5" name="1_seminar_input"></td>
 		<td><input class="1_seminar_input" type="radio" value="4" name="1_seminar_input"></td>
 		<td><input class="1_seminar_input" type="radio" value="3" name="1_seminar_input"></td>
@@ -542,7 +522,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td> &nbsp; &nbsp; &nbsp; &nbsp; H. Sports Facilities </td>
+		<td class='sports-general'> &nbsp; &nbsp; &nbsp; &nbsp; H. Sports Facilities </td>
 		<td><input class="1_sports_input" type="radio" value="5" name="1_sports_input"></td>
 		<td><input class="1_sports_input" type="radio" value="4" name="1_sports_input"></td>
 		<td><input class="1_sports_input" type="radio" value="3" name="1_sports_input"></td>
@@ -562,7 +542,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td> &nbsp; &nbsp; &nbsp; &nbsp; I. Student Lounge </td>
+		<td class='lounge-general'> &nbsp; &nbsp; &nbsp; &nbsp; I. Student Lounge </td>
 		<td><input class="1_lounge_input" type="radio" value="5" name="1_lounge_input"></td>
 		<td><input class="1_lounge_input" type="radio" value="4" name="1_lounge_input"></td>
 		<td><input class="1_lounge_input" type="radio" value="3" name="1_lounge_input"></td>
@@ -588,7 +568,7 @@
 
 	<tr>
 		<td><b></b></td>
-		<td><span> XII. College of </span><span><input readonly type="text" id="college_input" name="college_input" <?php echo 'value="'.$row['college'].'"'?>></span> </td>
+		<td class='college-general'><span> XII. College of </span><span><input readonly type="text" id="college_input" name="college_input" <?php echo 'value="'.$row['college'].'"'?>></span> </td>
 		<td><input class="1_college_input" type="radio" value="5" name="1_college_input"></td>
 		<td><input class="1_college_input" type="radio" value="4" name="1_college_input"></td>
 		<td><input class="1_college_input" type="radio" value="3" name="1_college_input"></td>

@@ -72,9 +72,69 @@ $queryCASAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_u
 $respCASAns1_1 = @mysqli_query($dbc, $queryCASAns1_1);
 $rowCASAns1_1=mysqli_fetch_array($respCASAns1_1);
 
+$general_rowName = null;
+$paramsDescription = $query_params['description'];
+if($paramsDescription == "registrarship"){
+    $general_rowName = "REGISTRAR'S OFFICE";
+} else if($paramsDescription == "osas"){
+    $general_rowName = "OFFICE OF STUDENT AFFAIRS AND SERVICES";
+} else if($paramsDescription == "guidance"){
+    $general_rowName = "GUIDANCE SERVICES";
+} else if($paramsDescription == "admission"){
+    $general_rowName = "ADMISSION SERVICES";
+} else if($paramsDescription == "counseling"){
+    $general_rowName = "COUNSELING SERVICES";
+} else if($paramsDescription == "testing"){
+    $general_rowName = "TESTING SERVICES";
+} else if($paramsDescription == "medical"){
+    $general_rowName = "MEDICAL SERVICES";
+} else if($paramsDescription == "dental"){
+    $general_rowName = "DENTAL SERVICES";
+} else if($paramsDescription == "campus"){
+    $general_rowName = "CAMPUS PUBLICATION";
+} else if($paramsDescription == "canteen"){
+    $general_rowName = "SCHOOL CANTEEN";
+} else if($paramsDescription == "scholarship"){
+    $general_rowName = "SCHOLARSHIP PROGRAM";
+} else if($paramsDescription == "gad"){
+    $general_rowName = "GENDER AND DEVELOPMENT";
+} else if($paramsDescription == "library"){
+    $general_rowName = "LIBRARY SERVICES";
+} else if($paramsDescription == "research"){
+    $general_rowName = "RESEARCH OFFICE";
+} else if($paramsDescription == "cashier"){
+    $general_rowName = "CASHIER'S OFFICE";
+} else if($paramsDescription == "budget"){
+    $general_rowName = "BUDGET & FINANCE/ACCOUNTING";
+} else if($paramsDescription == "security"){
+    $general_rowName = "SECURITY SERVICES";
+} else if($paramsDescription == "infastructure"){
+    $general_rowName = "INFASTRUCTURE/UTILITIES";
+} else if($paramsDescription == "classroom"){
+    $general_rowName = "Classroom";
+} else if($paramsDescription == "cr"){
+    $general_rowName = "COMFORT ROOMS";
+} else if($paramsDescription == "science"){
+    $general_rowName = "SCIENCE LABORATORY (FACILITIES & EQUIPMENT)";
+} else if($paramsDescription == "computer"){
+    $general_rowName = "COMPUTER LABORATORY & EQUIPMENT";
+} else if($paramsDescription == "bao"){
+    $general_rowName = "BUSINESS AFFAIRS (BAO)";
+} else if($paramsDescription == "internet"){
+    $general_rowName = "INTERNET SERVICES";
+} else if($paramsDescription == "seminar"){
+    $general_rowName = "SEMINAR/TRAINING HALLS";
+} else if($paramsDescription == "sport"){
+    $general_rowName = "SPORTS FACILITIES";
+} else if($paramsDescription == "lounge"){
+    $general_rowName = "STUDENT LOUNGE";
+} else if($paramsDescription == "college"){
+    $general_rowName = "COLLEGE";
+}
+
 
     $pdf->SetFont('Arial','B',15);
-    $pdf->Cell(0,10,"      REGISTRARS' OFFICE",1,0,'L',0);
+    $pdf->Cell(0,10,"      ".$general_rowName,1,0,'L',0);
     $pdf->Ln(10);
     $pdf->Cell(50,10," ",1,0,'C',0);
     $pdf->SetFont('Arial','B',12);
