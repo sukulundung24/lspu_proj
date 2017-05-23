@@ -128,13 +128,12 @@
 								<label for="txt_department" class="col-md-3 control-label">Department:</label>
 								<div class="col-md-8">
 									<select id="txt_department" class="form-control">
-										<option value="CCIT">CCIT</option>
-										<option value="COE">COE</option>
-										<option value="CBA">CBA</option>
-										<option value="CAPS">CAPS</option>
-										<option value="CON">CON</option>
 										<option value="CAS">CAS</option>
-										<option value="COED">COED</option>
+										<option value="CTE">CTE</option>
+										<option value="CFND">CFND</option>
+										<option value="CHMT">CHMT</option>
+										<option value="CBMA">CBMA</option>
+										<option value="COF">COF</option>
 									</select>
 								</div>
 							</div>

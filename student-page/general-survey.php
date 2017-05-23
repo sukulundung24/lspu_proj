@@ -23,7 +23,7 @@
 	</tr>
 	<tr>
 		<td><b>I.</b></td>
-		<td><b>Registrar's Office</b></td>
+		<td class="reg-general"><b>Registrar's Office</b></td>
 		<td><input class="1_registrar_input" type="radio" value="5" name="1_registrar_input"></td>
 		<td><input class="1_registrar_input" type="radio" value="4" name="1_registrar_input"></td>
 		<td><input class="1_registrar_input" type="radio" value="3" name="1_registrar_input"></td>
@@ -43,7 +43,7 @@
 
 	<tr>
 		<td><b>II.</b></td>
-		<td><b>Office of Student Affairs and Services</b></td>
+		<td class="OSAS-general"><b>Office of Student Affairs and Services</b></td>
 		<td><input class="1_student_input" type="radio" value="5" name="1_student_input"></td>
 		<td><input class="1_student_input" type="radio" value="4" name="1_student_input"></td>
 		<td><input class="1_student_input" type="radio" value="3" name="1_student_input"></td>
@@ -580,9 +580,15 @@
 		<td><input type="text" name="lounge_remark" class="lounge_remark"></td>
 	</tr>
 
+	<?php 
+		$query = "Select * from tbl_user where id_num = '".$_SESSION['username']."'";
+		$resp = @mysqli_query($dbc, $query);
+		$row=mysqli_fetch_array($resp)
+	?>
+
 	<tr>
 		<td><b></b></td>
-		<td><span> XII. College of </span><span><input type="text" name="college_input"></span> </td>
+		<td><span> XII. College of </span><span><input readonly type="text" id="college_input" name="college_input" <?php echo 'value="'.$row['college'].'"'?>></span> </td>
 		<td><input class="1_college_input" type="radio" value="5" name="1_college_input"></td>
 		<td><input class="1_college_input" type="radio" value="4" name="1_college_input"></td>
 		<td><input class="1_college_input" type="radio" value="3" name="1_college_input"></td>

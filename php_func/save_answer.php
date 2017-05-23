@@ -76,7 +76,7 @@
 		}
 
 	} else {
-		echo "Please complete the form.";
+		echo "Please complete the form. save";
 	}
 	// $query = "INSERT INTO tbl_question (question,service_type) VALUES(?,?)";
 	// $stmt = mysqli_prepare($dbc,$query);

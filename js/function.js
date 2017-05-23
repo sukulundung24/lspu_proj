@@ -446,14 +446,60 @@ $(document).ready(function(){
 			}
 		})
 
+
+
+//=========================== general registrarship ===================================================
+		var general_data = [];
+		$('.reg-general').each(function(i){
+			var ans1 = $('.1_registrar_input:checked').val();
+			var ans2 = $('.2_registrar_input:checked').val();
+			var remark = $('.registrar_remark').val();
+
+			if(ans1 && ans2 && remark){
+				general_data.push({
+					answer1: ans1,
+					answer2: ans2,
+					remark: remark,
+					description: 'registrarship'
+				})
+			}
+		})
+
+		$('.OSAS-general').each(function(i){
+			var ans1 = $('.1_student_input:checked').val();
+			var ans2 = $('.2_student_input:checked').val();
+			var remark = $('.student_remark').val();
+
+			if(ans1 && ans2 && remark){
+				general_data.push({
+					answer1: ans1,
+					answer2: ans2,
+					remark: remark,
+					description: 'osas'
+				})
+			}
+		})
+
+
 		$.post('../php_func/save_answer.php',
 		{
-			data: data,
+			data: data
 		},
 		function(data){
 			if(data=="success"){
-				alert("You have successfully filled out the survey!");
-				location.href = "dashboard.php";
+				alert(general_data)
+				$.post('../php_func/save_answer_general.php',{
+					general_data:general_data
+				},function(datas){
+					alert(datas);
+					if(datas=="success"){
+						alert("You have successfully filled out the survey!");
+						location.href = "dashboard.php";
+					} else {
+						alert('Something went wrong');
+					}
+				})
+				
 			} else {
 				alert("There's something wrong!");
 			}

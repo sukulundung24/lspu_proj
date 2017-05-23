@@ -6,6 +6,12 @@
 	$selectedColumn = null;
 	if($column == "gender"){
 		$selectedColumn = 'sex';
+	} else if($column=='course'){
+		$selectedColumn = 'course';
+	} else if($column == 'year_level'){
+		$selectedColumn = 'year_level';
+	} else if($column == 'college'){
+		$selectedColumn = 'college';
 	}
 
 	$query = "Select * from tbl_user where type <>'admin'";
