@@ -24,7 +24,7 @@
 		    		<div class="content-holder">
 		    			<div class="row">
 		    				<div class="col-md-6">
-		    					<h3 style="margin:10px 0;">Human Resources</h3>
+		    					<h3 style="margin:10px 0;">Human Resources Survey</h3>
 		    				</div>
 		    				<div class="col-md-6">
 		    					<a href="add-question.php?service_type=humanresources" class="btn btn-success addbtn"><i class="glyphicon glyphicon-plus"></i> Add</a>
