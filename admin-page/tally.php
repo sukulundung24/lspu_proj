@@ -25,15 +25,21 @@
 		    		<div class="content-holder">
 		    			<h3>Tally</h3>
 		    			<div class="col-md-offset-8 col-md-4">
-			    			<select id="category" class="form-control">
+			    			<select id="category_tally" class="form-control">
 			    				<option value='all'>All</option>
 			    				<option value='gender'>Gender</option>
 			    				<option value='course'>Course</option>
 			    				<option value='year_level'>Year Level</option>
 			    			</select>
 		    			</div>
+		    			<br> <br> <br><br><br>
 		    			<canvas id="tally_chart" width="400" height="200"></canvas>
-
+		    			<br><br><br><br>
+		    			<div class="row">
+		    				<div class="col-md-7">
+		    					Total Number: <span class="tot_num">1</span>
+		    				</div> 
+		    			</div>
 		    		</div>
 		    	</div>
 		    </div>
@@ -70,14 +76,13 @@
 	?>
 
 	<script type="text/javascript">
-		$('#category').on('change',function(e){
+		$('#category_tally').on('change',function(e){
 			e.preventDefault();
 			var cur = $(this).val();
 			$.post('../php_func/taly.php',{
 				category: cur
 			},
 			function(data){
-				alert(data)
 				if(cur == "all"){
 					location.reload();
 				}
@@ -92,7 +97,6 @@
 				function(datas){
 					var arrData = JSON.parse(datas);
 					var arrColor = [];
-					alert(arrData.length);
 					for(var i=0;i<arrData.length; i++){
 						if((i%2)==0){
 							arrColor.push("#4fff69");
@@ -100,7 +104,6 @@
 							arrColor.push("#4fb8ff");
 						}
 					}
-					alert(arrColor.length);
 
 					var newChart = new Chart(ctx, {
 						type: 'bar',

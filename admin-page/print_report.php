@@ -45,7 +45,7 @@
 			    			</div>
 		    			</div>
 
-		    			<h5><b>General Percentage</b></h5>
+		    			<h5><b>General Survey Percentage</b></h5>
 		    			<div class="row">
 			    			<div class="col-md-4 col-md-offset-1">
 			    				<select class="form-control" id="print_general">
@@ -86,6 +86,27 @@
 			    				<button id="btn_print_general" class="btn btn-success btn-block">Print / Download</button>
 			    			</div>
 		    			</div>
+
+		    			<h5><b>Services Survey Percentage</b></h5>
+		    			<div class="row">
+		    				<div class="col-md-4 col-md-offset-1">
+		    					<select class="form-control" id="service_list">
+		    					<?php
+		    						$query = 'select * from tbl_question';
+		    						$resp = @mysqli_query($dbc, $query);
+		    						while($row=mysqli_fetch_array($resp)){
+		    							echo '<option value="'.$row['id'].'"> '.$row['question'].' </option>';
+		    						}
+		    					?>
+		    					</select>
+		    				</div>
+		    				<div class="col-md-3">
+		    					
+		    				</div>
+		    				<div class="col-md-3">
+		    					<button id="btn_print_service" class="btn btn-success btn-block">Print / Download</button>
+		    				</div>
+		    			</div>
 		    		</div>
 		    	</div>
 		    </div>
@@ -102,6 +123,11 @@
 	<script type="text/javascript">
 		$('#btn_print_general').on('click',function(e){
 			var win = window.open("report_filtered_general.php?description="+$('#print_general').val(),'_blank');
+			win.focus();
+		});
+
+		$('#btn_print_service').on('click',function(e){
+			var win = window.open('report_filtered_services.php?id='+$('#service_list').val(),'_blank');
 			win.focus();
 		});
 	</script>

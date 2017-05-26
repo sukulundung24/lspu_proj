@@ -47,98 +47,41 @@ $query_str = parse_url($link, PHP_URL_QUERY);
 parse_str($query_str, $query_params);
 
 //======================= CAS 5 - 1  ==================================
-$queryCASAns1_5 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CAS' and tbl_general.ans1='5' and tbl_general.description='".$query_params['description']."'";
+$queryCASAns1_5 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CAS' and tbl_answer.answer='5' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCASAns1_5 = @mysqli_query($dbc, $queryCASAns1_5);
 $rowCASAns1_5=mysqli_fetch_array($respCASAns1_5);
 
-$queryCASAns1_4 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CAS' and tbl_general.ans1='4' and tbl_general.description='".$query_params['description']."'";
+$queryCASAns1_4 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CAS' and tbl_answer.answer='4' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCASAns1_4 = @mysqli_query($dbc, $queryCASAns1_4);
 $rowCASAns1_4=mysqli_fetch_array($respCASAns1_4);
 
-$queryCASAns1_3 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CAS' and tbl_general.ans1='3' and tbl_general.description='".$query_params['description']."'";
+$queryCASAns1_3 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CAS' and tbl_answer.answer='3' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCASAns1_3 = @mysqli_query($dbc, $queryCASAns1_3);
 $rowCASAns1_3=mysqli_fetch_array($respCASAns1_3);
 
-$queryCASAns1_2 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CAS' and tbl_general.ans1='2' and tbl_general.description='".$query_params['description']."'";
+$queryCASAns1_2 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CAS' and tbl_answer.answer='2' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCASAns1_2 = @mysqli_query($dbc, $queryCASAns1_2);
 $rowCASAns1_2=mysqli_fetch_array($respCASAns1_2);
 
-$queryCASAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CAS' and tbl_general.ans1='1' and tbl_general.description='".$query_params['description']."'";
+$queryCASAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CAS' and tbl_answer.answer='1' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCASAns1_1 = @mysqli_query($dbc, $queryCASAns1_1);
 $rowCASAns1_1=mysqli_fetch_array($respCASAns1_1);
 
-$general_rowName = null;
-$paramsDescription = $query_params['description'];
-if($paramsDescription == "registrarship"){
-    $general_rowName = "REGISTRAR'S OFFICE";
-} else if($paramsDescription == "osas"){
-    $general_rowName = "OFFICE OF STUDENT AFFAIRS AND SERVICES";
-} else if($paramsDescription == "guidance"){
-    $general_rowName = "GUIDANCE SERVICES";
-} else if($paramsDescription == "admission"){
-    $general_rowName = "ADMISSION SERVICES";
-} else if($paramsDescription == "counseling"){
-    $general_rowName = "COUNSELING SERVICES";
-} else if($paramsDescription == "testing"){
-    $general_rowName = "TESTING SERVICES";
-} else if($paramsDescription == "medical"){
-    $general_rowName = "MEDICAL SERVICES";
-} else if($paramsDescription == "dental"){
-    $general_rowName = "DENTAL SERVICES";
-} else if($paramsDescription == "campus"){
-    $general_rowName = "CAMPUS PUBLICATION";
-} else if($paramsDescription == "canteen"){
-    $general_rowName = "SCHOOL CANTEEN";
-} else if($paramsDescription == "scholarship"){
-    $general_rowName = "SCHOLARSHIP PROGRAM";
-} else if($paramsDescription == "gad"){
-    $general_rowName = "GENDER AND DEVELOPMENT";
-} else if($paramsDescription == "library"){
-    $general_rowName = "LIBRARY SERVICES";
-} else if($paramsDescription == "research"){
-    $general_rowName = "RESEARCH OFFICE";
-} else if($paramsDescription == "cashier"){
-    $general_rowName = "CASHIER'S OFFICE";
-} else if($paramsDescription == "budget"){
-    $general_rowName = "BUDGET & FINANCE/ACCOUNTING";
-} else if($paramsDescription == "security"){
-    $general_rowName = "SECURITY SERVICES";
-} else if($paramsDescription == "infastructure"){
-    $general_rowName = "INFASTRUCTURE/UTILITIES";
-} else if($paramsDescription == "classroom"){
-    $general_rowName = "Classroom";
-} else if($paramsDescription == "cr"){
-    $general_rowName = "COMFORT ROOMS";
-} else if($paramsDescription == "science"){
-    $general_rowName = "SCIENCE LABORATORY (FACILITIES & EQUIPMENT)";
-} else if($paramsDescription == "computer"){
-    $general_rowName = "COMPUTER LABORATORY & EQUIPMENT";
-} else if($paramsDescription == "bao"){
-    $general_rowName = "BUSINESS AFFAIRS (BAO)";
-} else if($paramsDescription == "internet"){
-    $general_rowName = "INTERNET SERVICES";
-} else if($paramsDescription == "seminar"){
-    $general_rowName = "SEMINAR/TRAINING HALLS";
-} else if($paramsDescription == "sport"){
-    $general_rowName = "SPORTS FACILITIES";
-} else if($paramsDescription == "lounge"){
-    $general_rowName = "STUDENT LOUNGE";
-} else if($paramsDescription == "college"){
-    $general_rowName = "COLLEGE";
-}
-
+$query_tbl_question = "Select * from tbl_question where id = '".$query_params['id']."'";
+$resp_question = @mysqli_query($dbc,$query_tbl_question);
+$row_question = mysqli_fetch_array($resp_question);
 
     $pdf->SetFont('Arial','B',15);
-    $pdf->Cell(0,10,"      ".$general_rowName,1,0,'L',0);
+    $pdf->Cell(0,10,"      ".$row_question['question'],1,0,'L',0);
     $pdf->Ln(10);
     $pdf->Cell(50,10," ",1,0,'C',0);
     $pdf->SetFont('Arial','B',12);
-    $pdf->Cell(100,10,"Quality of Service Provided",1,0,'C',0);
+    $pdf->Cell(100,10,"Promptness of Services",1,0,'C',0);
     $pdf->Cell(20,10," ",1,0,'C',0);
     $pdf->Cell(20,10," ",1,0,'C',0);
     $pdf->Ln(10);
@@ -177,27 +120,27 @@ if($paramsDescription == "registrarship"){
 
 //======================== CTE 5 - 1 =============================
 
-$queryCTEAns1_5 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CTE' and tbl_general.ans1='5' and tbl_general.description='".$query_params['description']."'";
+$queryCTEAns1_5 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CTE' and tbl_answer.answer='5' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCTEAns1_5 = @mysqli_query($dbc, $queryCTEAns1_5);
 $rowCTEAns1_5=mysqli_fetch_array($respCTEAns1_5);
 
-$queryCTEAns1_4 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CTE' and tbl_general.ans1='4' and tbl_general.description='".$query_params['description']."'";
+$queryCTEAns1_4 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CTE' and tbl_answer.answer='4' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCTEAns1_4 = @mysqli_query($dbc, $queryCTEAns1_4);
 $rowCTEAns1_4=mysqli_fetch_array($respCTEAns1_4);
 
-$queryCTEAns1_3 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CTE' and tbl_general.ans1='3' and tbl_general.description='".$query_params['description']."'";
+$queryCTEAns1_3 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CTE' and tbl_answer.answer='3' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCTEAns1_3 = @mysqli_query($dbc, $queryCTEAns1_3);
 $rowCTEAns1_3=mysqli_fetch_array($respCTEAns1_3);
 
-$queryCTEAns1_2 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CTE' and tbl_general.ans1='2' and tbl_general.description='".$query_params['description']."'";
+$queryCTEAns1_2 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CTE' and tbl_answer.answer='2' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCTEAns1_2 = @mysqli_query($dbc, $queryCTEAns1_2);
 $rowCTEAns1_2=mysqli_fetch_array($respCTEAns1_2);
 
-$queryCTEAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CTE' and tbl_general.ans1='1' and tbl_general.description='".$query_params['description']."'";
+$queryCTEAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CTE' and tbl_answer.answer='1' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCTEAns1_1 = @mysqli_query($dbc, $queryCTEAns1_1);
 $rowCTEAns1_1=mysqli_fetch_array($respCTEAns1_1);
@@ -224,27 +167,27 @@ $rowCTEAns1_1=mysqli_fetch_array($respCTEAns1_1);
 
 //======================== CFND 5 - 1 =============================
 
-$queryCFNDAns1_5 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CFND' and tbl_general.ans1='5' and tbl_general.description='".$query_params['description']."'";
+$queryCFNDAns1_5 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CFND' and tbl_answer.answer='5' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCFNDAns1_5 = @mysqli_query($dbc, $queryCFNDAns1_5);
 $rowCFNDAns1_5=mysqli_fetch_array($respCFNDAns1_5);
 
-$queryCFNDAns1_4 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CFND' and tbl_general.ans1='4' and tbl_general.description='".$query_params['description']."'";
+$queryCFNDAns1_4 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CFND' and tbl_answer.answer='4' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCFNDAns1_4 = @mysqli_query($dbc, $queryCFNDAns1_4);
 $rowCFNDAns1_4=mysqli_fetch_array($respCFNDAns1_4);
 
-$queryCFNDAns1_3 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CFND' and tbl_general.ans1='3' and tbl_general.description='".$query_params['description']."'";
+$queryCFNDAns1_3 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CFND' and tbl_answer.answer='3' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCFNDAns1_3 = @mysqli_query($dbc, $queryCFNDAns1_3);
 $rowCFNDAns1_3=mysqli_fetch_array($respCFNDAns1_3);
 
-$queryCFNDAns1_2 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CFND' and tbl_general.ans1='2' and tbl_general.description='".$query_params['description']."'";
+$queryCFNDAns1_2 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CFND' and tbl_answer.answer='2' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCFNDAns1_2 = @mysqli_query($dbc, $queryCFNDAns1_2);
 $rowCFNDAns1_2=mysqli_fetch_array($respCFNDAns1_2);
 
-$queryCFNDAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CFND' and tbl_general.ans1='1' and tbl_general.description='".$query_params['description']."'";
+$queryCFNDAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CFND' and tbl_answer.answer='1' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCFNDAns1_1 = @mysqli_query($dbc, $queryCFNDAns1_1);
 $rowCFNDAns1_1=mysqli_fetch_array($respCFNDAns1_1);
@@ -272,27 +215,27 @@ $rowCFNDAns1_1=mysqli_fetch_array($respCFNDAns1_1);
 
 //======================== CHMT 5 - 1 =============================
 
-$queryCHMTAns1_5 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CHMT' and tbl_general.ans1='5' and tbl_general.description='".$query_params['description']."'";
+$queryCHMTAns1_5 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CHMT' and tbl_answer.answer='5' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCHMTAns1_5 = @mysqli_query($dbc, $queryCHMTAns1_5);
 $rowCHMTAns1_5=mysqli_fetch_array($respCHMTAns1_5);
 
-$queryCHMTAns1_4 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CHMT' and tbl_general.ans1='4' and tbl_general.description='".$query_params['description']."'";
+$queryCHMTAns1_4 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CHMT' and tbl_answer.answer='4' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCHMTAns1_4 = @mysqli_query($dbc, $queryCHMTAns1_4);
 $rowCHMTAns1_4=mysqli_fetch_array($respCHMTAns1_4);
 
-$queryCHMTAns1_3 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CHMT' and tbl_general.ans1='3' and tbl_general.description='".$query_params['description']."'";
+$queryCHMTAns1_3 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CHMT' and tbl_answer.answer='3' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCHMTAns1_3 = @mysqli_query($dbc, $queryCHMTAns1_3);
 $rowCHMTAns1_3=mysqli_fetch_array($respCHMTAns1_3);
 
-$queryCHMTAns1_2 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CHMT' and tbl_general.ans1='2' and tbl_general.description='".$query_params['description']."'";
+$queryCHMTAns1_2 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CHMT' and tbl_answer.answer='2' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCHMTAns1_2 = @mysqli_query($dbc, $queryCHMTAns1_2);
 $rowCHMTAns1_2=mysqli_fetch_array($respCHMTAns1_2);
 
-$queryCHMTAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CHMT' and tbl_general.ans1='1' and tbl_general.description='".$query_params['description']."'";
+$queryCHMTAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CHMT' and tbl_answer.answer='1' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCHMTAns1_1 = @mysqli_query($dbc, $queryCHMTAns1_1);
 $rowCHMTAns1_1=mysqli_fetch_array($respCHMTAns1_1);
@@ -319,27 +262,27 @@ $rowCHMTAns1_1=mysqli_fetch_array($respCHMTAns1_1);
 
 //======================== CBMA 5 - 1 =============================
 
-$queryCBMAAns1_5 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CBMA' and tbl_general.ans1='5' and tbl_general.description='".$query_params['description']."'";
+$queryCBMAAns1_5 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CBMA' and tbl_answer.answer='5' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCBMAAns1_5 = @mysqli_query($dbc, $queryCBMAAns1_5);
 $rowCBMAAns1_5=mysqli_fetch_array($respCBMAAns1_5);
 
-$queryCBMAAns1_4 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CBMA' and tbl_general.ans1='4' and tbl_general.description='".$query_params['description']."'";
+$queryCBMAAns1_4 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CBMA' and tbl_answer.answer='4' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCBMAAns1_4 = @mysqli_query($dbc, $queryCBMAAns1_4);
 $rowCBMAAns1_4=mysqli_fetch_array($respCBMAAns1_4);
 
-$queryCBMAAns1_3 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CBMA' and tbl_general.ans1='3' and tbl_general.description='".$query_params['description']."'";
+$queryCBMAAns1_3 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CBMA' and tbl_answer.answer='3' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCBMAAns1_3 = @mysqli_query($dbc, $queryCBMAAns1_3);
 $rowCBMAAns1_3=mysqli_fetch_array($respCBMAAns1_3);
 
-$queryCBMAAns1_2 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CBMA' and tbl_general.ans1='2' and tbl_general.description='".$query_params['description']."'";
+$queryCBMAAns1_2 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CBMA' and tbl_answer.answer='2' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCBMAAns1_2 = @mysqli_query($dbc, $queryCBMAAns1_2);
 $rowCBMAAns1_2=mysqli_fetch_array($respCBMAAns1_2);
 
-$queryCBMAAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CBMA' and tbl_general.ans1='1' and tbl_general.description='".$query_params['description']."'";
+$queryCBMAAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CBMA' and tbl_answer.answer='1' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCBMAAns1_1 = @mysqli_query($dbc, $queryCBMAAns1_1);
 $rowCBMAAns1_1=mysqli_fetch_array($respCBMAAns1_1);
@@ -367,27 +310,27 @@ $rowCBMAAns1_1=mysqli_fetch_array($respCBMAAns1_1);
 
 //======================== COF 5 - 1 =============================
 
-$queryCOFAns1_5 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='COF' and tbl_general.ans1='5' and tbl_general.description='".$query_params['description']."'";
+$queryCOFAns1_5 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='COF' and tbl_answer.answer='5' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCOFAns1_5 = @mysqli_query($dbc, $queryCOFAns1_5);
 $rowCOFAns1_5=mysqli_fetch_array($respCOFAns1_5);
 
-$queryCOFAns1_4 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='COF' and tbl_general.ans1='4' and tbl_general.description='".$query_params['description']."'";
+$queryCOFAns1_4 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='COF' and tbl_answer.answer='4' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCOFAns1_4 = @mysqli_query($dbc, $queryCOFAns1_4);
 $rowCOFAns1_4=mysqli_fetch_array($respCOFAns1_4);
 
-$queryCOFAns1_3 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='COF' and tbl_general.ans1='3' and tbl_general.description='".$query_params['description']."'";
+$queryCOFAns1_3 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='COF' and tbl_answer.answer='3' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCOFAns1_3 = @mysqli_query($dbc, $queryCOFAns1_3);
 $rowCOFAns1_3=mysqli_fetch_array($respCOFAns1_3);
 
-$queryCOFAns1_2 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='COF' and tbl_general.ans1='2' and tbl_general.description='".$query_params['description']."'";
+$queryCOFAns1_2 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='COF' and tbl_answer.answer='2' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCOFAns1_2 = @mysqli_query($dbc, $queryCOFAns1_2);
 $rowCOFAns1_2=mysqli_fetch_array($respCOFAns1_2);
 
-$queryCOFAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='COF' and tbl_general.ans1='1' and tbl_general.description='".$query_params['description']."'";
+$queryCOFAns1_1 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='COF' and tbl_answer.answer='1' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCOFAns1_1 = @mysqli_query($dbc, $queryCOFAns1_1);
 $rowCOFAns1_1=mysqli_fetch_array($respCOFAns1_1);
@@ -492,7 +435,7 @@ $rowCOFAns1_1=mysqli_fetch_array($respCOFAns1_1);
     $pdf->Ln(10);
     $pdf->Cell(50,10," ",1,0,'C',0);
     $pdf->SetFont('Arial','B',12);
-    $pdf->Cell(100,10,"Personnel Attitude",1,0,'C',0);
+    $pdf->Cell(100,10,"Courtesy of the Provider",1,0,'C',0);
     $pdf->Cell(20,10," ",1,0,'C',0);
     $pdf->Cell(20,10," ",1,0,'C',0);
     $pdf->Ln(10);
@@ -511,27 +454,27 @@ $rowCOFAns1_1=mysqli_fetch_array($respCOFAns1_1);
     $pdf->Cell(20,10,"",1,0,'C',0);
 
 //======================= CAS 5 - 1  ==================================
-$queryCASAns2_5 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CAS' and tbl_general.ans2='5' and tbl_general.description='".$query_params['description']."'";
+$queryCASAns2_5 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CAS' and tbl_answer.answer_2='5' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCASAns2_5 = @mysqli_query($dbc, $queryCASAns2_5);
 $rowCASAns2_5=mysqli_fetch_array($respCASAns2_5);
 
-$queryCASAns2_4 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CAS' and tbl_general.ans2='4' and tbl_general.description='".$query_params['description']."'";
+$queryCASAns2_4 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CAS' and tbl_answer.answer_2='4' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCASAns2_4 = @mysqli_query($dbc, $queryCASAns2_4);
 $rowCASAns2_4=mysqli_fetch_array($respCASAns2_4);
 
-$queryCASAns2_3 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CAS' and tbl_general.ans2='3' and tbl_general.description='".$query_params['description']."'";
+$queryCASAns2_3 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CAS' and tbl_answer.answer_2='3' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCASAns2_3 = @mysqli_query($dbc, $queryCASAns2_3);
 $rowCASAns2_3=mysqli_fetch_array($respCASAns2_3);
 
-$queryCASAns2_2 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CAS' and tbl_general.ans2='2' and tbl_general.description='".$query_params['description']."'";
+$queryCASAns2_2 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CAS' and tbl_answer.answer_2='2' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCASAns2_2 = @mysqli_query($dbc, $queryCASAns2_2);
 $rowCASAns2_2=mysqli_fetch_array($respCASAns2_2);
 
-$queryCASAns2_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CAS' and tbl_general.ans2='1' and tbl_general.description='".$query_params['description']."'";
+$queryCASAns2_1 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CAS' and tbl_answer.answer_2='1' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCASAns2_1 = @mysqli_query($dbc, $queryCASAns2_1);
 $rowCASAns2_1=mysqli_fetch_array($respCASAns2_1);
@@ -557,27 +500,27 @@ $rowCASAns2_1=mysqli_fetch_array($respCASAns2_1);
 
 
     //======================= CTE 5 - 1  ==================================
-$queryCTEAns2_5 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CTE' and tbl_general.ans2='5' and tbl_general.description='".$query_params['description']."'";
+$queryCTEAns2_5 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CTE' and tbl_answer.answer_2='5' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCTEAns2_5 = @mysqli_query($dbc, $queryCTEAns2_5);
 $rowCTEAns2_5=mysqli_fetch_array($respCTEAns2_5);
 
-$queryCTEAns2_4 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CTE' and tbl_general.ans2='4' and tbl_general.description='".$query_params['description']."'";
+$queryCTEAns2_4 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CTE' and tbl_answer.answer_2='4' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCTEAns2_4 = @mysqli_query($dbc, $queryCTEAns2_4);
 $rowCTEAns2_4=mysqli_fetch_array($respCTEAns2_4);
 
-$queryCTEAns2_3 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CTE' and tbl_general.ans2='3' and tbl_general.description='".$query_params['description']."'";
+$queryCTEAns2_3 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CTE' and tbl_answer.answer_2='3' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCTEAns2_3 = @mysqli_query($dbc, $queryCTEAns2_3);
 $rowCTEAns2_3=mysqli_fetch_array($respCTEAns2_3);
 
-$queryCTEAns2_2 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CTE' and tbl_general.ans2='2' and tbl_general.description='".$query_params['description']."'";
+$queryCTEAns2_2 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CTE' and tbl_answer.answer_2='2' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCTEAns2_2 = @mysqli_query($dbc, $queryCTEAns2_2);
 $rowCTEAns2_2=mysqli_fetch_array($respCTEAns2_2);
 
-$queryCTEAns2_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CTE' and tbl_general.ans2='1' and tbl_general.description='".$query_params['description']."'";
+$queryCTEAns2_1 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CTE' and tbl_answer.answer_2='1' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCTEAns2_1 = @mysqli_query($dbc, $queryCTEAns2_1);
 $rowCTEAns2_1=mysqli_fetch_array($respCTEAns2_1);
@@ -602,27 +545,27 @@ $rowCTEAns2_1=mysqli_fetch_array($respCTEAns2_1);
 
 
     //======================= CFND 5 - 1  ==================================
-$queryCFNDAns2_5 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CFND' and tbl_general.ans2='5' and tbl_general.description='".$query_params['description']."'";
+$queryCFNDAns2_5 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CFND' and tbl_answer.answer_2='5' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCFNDAns2_5 = @mysqli_query($dbc, $queryCFNDAns2_5);
 $rowCFNDAns2_5=mysqli_fetch_array($respCFNDAns2_5);
 
-$queryCFNDAns2_4 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CFND' and tbl_general.ans2='4' and tbl_general.description='".$query_params['description']."'";
+$queryCFNDAns2_4 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CFND' and tbl_answer.answer_2='4' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCFNDAns2_4 = @mysqli_query($dbc, $queryCFNDAns2_4);
 $rowCFNDAns2_4=mysqli_fetch_array($respCFNDAns2_4);
 
-$queryCFNDAns2_3 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CFND' and tbl_general.ans2='3' and tbl_general.description='".$query_params['description']."'";
+$queryCFNDAns2_3 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CFND' and tbl_answer.answer_2='3' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCFNDAns2_3 = @mysqli_query($dbc, $queryCFNDAns2_3);
 $rowCFNDAns2_3=mysqli_fetch_array($respCFNDAns2_3);
 
-$queryCFNDAns2_2 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CFND' and tbl_general.ans2='2' and tbl_general.description='".$query_params['description']."'";
+$queryCFNDAns2_2 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CFND' and tbl_answer.answer_2='2' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCFNDAns2_2 = @mysqli_query($dbc, $queryCFNDAns2_2);
 $rowCFNDAns2_2=mysqli_fetch_array($respCFNDAns2_2);
 
-$queryCFNDAns2_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CFND' and tbl_general.ans2='1' and tbl_general.description='".$query_params['description']."'";
+$queryCFNDAns2_1 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CFND' and tbl_answer.answer_2='1' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCFNDAns2_1 = @mysqli_query($dbc, $queryCFNDAns2_1);
 $rowCFNDAns2_1=mysqli_fetch_array($respCFNDAns2_1);
@@ -648,27 +591,27 @@ $rowCFNDAns2_1=mysqli_fetch_array($respCFNDAns2_1);
     $pdf->Cell(20,10,sprintf('%0.2f',$CFNDMean2),1,0,'C',0);
 
         //======================= CHMT 5 - 1  ==================================
-$queryCHMTAns2_5 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CHMT' and tbl_general.ans2='5' and tbl_general.description='".$query_params['description']."'";
+$queryCHMTAns2_5 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CHMT' and tbl_answer.answer_2='5' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCHMTAns2_5 = @mysqli_query($dbc, $queryCHMTAns2_5);
 $rowCHMTAns2_5=mysqli_fetch_array($respCHMTAns2_5);
 
-$queryCHMTAns2_4 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CHMT' and tbl_general.ans2='4' and tbl_general.description='".$query_params['description']."'";
+$queryCHMTAns2_4 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CHMT' and tbl_answer.answer_2='4' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCHMTAns2_4 = @mysqli_query($dbc, $queryCHMTAns2_4);
 $rowCHMTAns2_4=mysqli_fetch_array($respCHMTAns2_4);
 
-$queryCHMTAns2_3 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CHMT' and tbl_general.ans2='3' and tbl_general.description='".$query_params['description']."'";
+$queryCHMTAns2_3 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CHMT' and tbl_answer.answer_2='3' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCHMTAns2_3 = @mysqli_query($dbc, $queryCHMTAns2_3);
 $rowCHMTAns2_3=mysqli_fetch_array($respCHMTAns2_3);
 
-$queryCHMTAns2_2 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CHMT' and tbl_general.ans2='2' and tbl_general.description='".$query_params['description']."'";
+$queryCHMTAns2_2 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CHMT' and tbl_answer.answer_2='2' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCHMTAns2_2 = @mysqli_query($dbc, $queryCHMTAns2_2);
 $rowCHMTAns2_2=mysqli_fetch_array($respCHMTAns2_2);
 
-$queryCHMTAns2_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CHMT' and tbl_general.ans2='1' and tbl_general.description='".$query_params['description']."'";
+$queryCHMTAns2_1 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CHMT' and tbl_answer.answer_2='1' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCHMTAns2_1 = @mysqli_query($dbc, $queryCHMTAns2_1);
 $rowCHMTAns2_1=mysqli_fetch_array($respCHMTAns2_1);
@@ -694,27 +637,27 @@ $rowCHMTAns2_1=mysqli_fetch_array($respCHMTAns2_1);
     $pdf->Cell(20,10,sprintf('%0.2f',$CHMTMean2),1,0,'C',0);
 
     //======================= CBMA 5 - 1  ==================================
-$queryCBMAAns2_5 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CBMA' and tbl_general.ans2='5' and tbl_general.description='".$query_params['description']."'";
+$queryCBMAAns2_5 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CBMA' and tbl_answer.answer_2='5' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCBMAAns2_5 = @mysqli_query($dbc, $queryCBMAAns2_5);
 $rowCBMAAns2_5=mysqli_fetch_array($respCBMAAns2_5);
 
-$queryCBMAAns2_4 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CBMA' and tbl_general.ans2='4' and tbl_general.description='".$query_params['description']."'";
+$queryCBMAAns2_4 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CBMA' and tbl_answer.answer_2='4' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCBMAAns2_4 = @mysqli_query($dbc, $queryCBMAAns2_4);
 $rowCBMAAns2_4=mysqli_fetch_array($respCBMAAns2_4);
 
-$queryCBMAAns2_3 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CBMA' and tbl_general.ans2='3' and tbl_general.description='".$query_params['description']."'";
+$queryCBMAAns2_3 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CBMA' and tbl_answer.answer_2='3' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCBMAAns2_3 = @mysqli_query($dbc, $queryCBMAAns2_3);
 $rowCBMAAns2_3=mysqli_fetch_array($respCBMAAns2_3);
 
-$queryCBMAAns2_2 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CBMA' and tbl_general.ans2='2' and tbl_general.description='".$query_params['description']."'";
+$queryCBMAAns2_2 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CBMA' and tbl_answer.answer_2='2' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCBMAAns2_2 = @mysqli_query($dbc, $queryCBMAAns2_2);
 $rowCBMAAns2_2=mysqli_fetch_array($respCBMAAns2_2);
 
-$queryCBMAAns2_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='CBMA' and tbl_general.ans2='1' and tbl_general.description='".$query_params['description']."'";
+$queryCBMAAns2_1 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='CBMA' and tbl_answer.answer_2='1' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCBMAAns2_1 = @mysqli_query($dbc, $queryCBMAAns2_1);
 $rowCBMAAns2_1=mysqli_fetch_array($respCBMAAns2_1);
@@ -740,27 +683,27 @@ $rowCBMAAns2_1=mysqli_fetch_array($respCBMAAns2_1);
     $pdf->Cell(20,10,sprintf('%0.2f',$CBMAMean2),1,0,'C',0);
 
         //======================= COF 5 - 1  ==================================
-$queryCOFAns2_5 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='COF' and tbl_general.ans2='5' and tbl_general.description='".$query_params['description']."'";
+$queryCOFAns2_5 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='COF' and tbl_answer.answer_2='5' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCOFAns2_5 = @mysqli_query($dbc, $queryCOFAns2_5);
 $rowCOFAns2_5=mysqli_fetch_array($respCOFAns2_5);
 
-$queryCOFAns2_4 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='COF' and tbl_general.ans2='4' and tbl_general.description='".$query_params['description']."'";
+$queryCOFAns2_4 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='COF' and tbl_answer.answer_2='4' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCOFAns2_4 = @mysqli_query($dbc, $queryCOFAns2_4);
 $rowCOFAns2_4=mysqli_fetch_array($respCOFAns2_4);
 
-$queryCOFAns2_3 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='COF' and tbl_general.ans2='3' and tbl_general.description='".$query_params['description']."'";
+$queryCOFAns2_3 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='COF' and tbl_answer.answer_2='3' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCOFAns2_3 = @mysqli_query($dbc, $queryCOFAns2_3);
 $rowCOFAns2_3=mysqli_fetch_array($respCOFAns2_3);
 
-$queryCOFAns2_2 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='COF' and tbl_general.ans2='2' and tbl_general.description='".$query_params['description']."'";
+$queryCOFAns2_2 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='COF' and tbl_answer.answer_2='2' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCOFAns2_2 = @mysqli_query($dbc, $queryCOFAns2_2);
 $rowCOFAns2_2=mysqli_fetch_array($respCOFAns2_2);
 
-$queryCOFAns2_1 = "Select count(*) from tbl_user INNER JOIN tbl_general ON tbl_user.id_num = tbl_general.id_num where tbl_user.college='COF' and tbl_general.ans2='1' and tbl_general.description='".$query_params['description']."'";
+$queryCOFAns2_1 = "Select count(*) from tbl_user INNER JOIN tbl_answer ON tbl_user.id_num = tbl_answer.username where tbl_user.college='COF' and tbl_answer.answer_2='1' and tbl_answer.question_id='".$query_params['id']."'";
 
 $respCOFAns2_1 = @mysqli_query($dbc, $queryCOFAns2_1);
 $rowCOFAns2_1=mysqli_fetch_array($respCOFAns2_1);
