@@ -72,6 +72,8 @@
 
 		$tempFinish = ($row[0]/$row3[0])*100;
 
+		echo "<script> $('.tot_num').html(".$row3[0]."); </script>";
+
 	echo '<script type="text/javascript">var ctx = document.getElementById("tally_chart");var newChart = new Chart(ctx,{type: "bar",data: {labels: ["who take survey", "who did not"],datasets: [{label: ["Student of LSPU"],data: ['.$tempFinish.','.$tempTotal.'],backgroundColor: ["#4fff69","#4fb8ff"]}]},options: { scales: { yAxes: [{ tricks: { min:0, max:100 } }] } }})</script>';
 	?>
 
@@ -97,14 +99,16 @@
 				function(datas){
 					var arrData = JSON.parse(datas);
 					var arrColor = [];
+					var tot_num = 0;
 					for(var i=0;i<arrData.length; i++){
+						tot_num += parseInt(arrData[i]);
 						if((i%2)==0){
 							arrColor.push("#4fff69");
 						} else {
 							arrColor.push("#4fb8ff");
 						}
 					}
-
+					$('.tot_num').html(tot_num);
 					var newChart = new Chart(ctx, {
 						type: 'bar',
 						data: {
