@@ -40,6 +40,16 @@
 		    					Total Number: <span class="tot_num">1</span>
 		    				</div> 
 		    			</div>
+		    			<div class="row">
+		    				<div class="col-md-7">
+		    					# of students/employee who take the survey: <span class="tot_num_take">1</span>
+		    				</div> 
+		    			</div>
+		    			<div class="row">
+		    				<div class="col-md-7">
+		    					# of students/employee who do not take the survey: <span class="tot_num_not_take">1</span>
+		    				</div> 
+		    			</div>
 		    		</div>
 		    	</div>
 		    </div>
@@ -72,7 +82,19 @@
 
 		$tempFinish = ($row[0]/$row3[0])*100;
 
-		echo "<script> $('.tot_num').html(".$row3[0]."); </script>";
+		$queryStudentTotal = "select count(*) from tbl_id_number";
+		$resp5 = @mysqli_query($dbc,$queryStudentTotal);
+		$row5 = mysqli_fetch_array($resp5);
+
+		echo "<script> $('.tot_num').html('<b>".$row5[0]."</b>'); </script>";
+
+		$query6 = "select count(*) from student_survey_status where status = 'finish'";
+		$resp6 = @mysqli_query($dbc,$query6);
+		$row6 = mysqli_fetch_array($resp6); 
+		echo "<script> $('.tot_num_take').html('<b>".$row6[0]."</b>'); </script>";
+
+		$notTake = $row5[0] - $row6[0];
+		echo "<script> $('.tot_num_not_take').html('<b>".$notTake."</b>'); </script>";
 
 	echo '<script type="text/javascript">var ctx = document.getElementById("tally_chart");var newChart = new Chart(ctx,{type: "bar",data: {labels: ["who take survey", "who did not"],datasets: [{label: ["Student of LSPU"],data: ['.$tempFinish.','.$tempTotal.'],backgroundColor: ["#4fff69","#4fb8ff"]}]},options: { scales: { yAxes: [{ tricks: { min:0, max:100 } }] } }})</script>';
 	?>
