@@ -130,7 +130,7 @@
 							arrColor.push("#4fb8ff");
 						}
 					}
-					$('.tot_num').html(tot_num);
+					// $('.tot_num').html(tot_num);
 					var newChart = new Chart(ctx, {
 						type: 'bar',
 						data: {
