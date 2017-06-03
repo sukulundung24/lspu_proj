@@ -141,7 +141,6 @@
 							<div class="form-group student-info">
 								<label for="txt_yrlvl" class="col-md-3 control-label">Year Level:</label>
 								<div class="col-md-8">
-									<input type="number" id="txt_yrlvl" class="form-control">
 									<select id="txt_yrlvl" class="form-control">
 										<option value='1'>1st year</option>
 										<option value='2'>2nd year</option>

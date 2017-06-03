@@ -4,6 +4,62 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.sticky {
+  background-color:white;
+  position: fixed;
+  margin-right:100px;
+  width: 100%;
+  left: 52.6%;
+  top: 0;
+  z-index: 100;
+  border-top: 0;
+}
+
+/*.sticky th:first-child{
+  width:28px;
+}*/
+
+.sticky th:first-child{
+  width:30px;
+}
+
+.sticky th:nth-child(2){
+  width:30px;
+}
+
+.sticky th:nth-child(3){
+  width:30px;
+}
+
+.sticky th:nth-child(4){
+  width:42px;
+}
+
+.sticky th:nth-child(5){
+  width:30px;
+}
+
+.sticky th:nth-child(6){
+  width:30px;
+}
+
+.sticky th:nth-child(7){
+  width:30px;
+}
+
+.sticky th:nth-child(8){
+  width:30px;
+}
+
+.sticky th:nth-child(9){
+  width:30px;
+}
+
+.sticky th:nth-child(10){
+  width:43px;
+}
+
+
 .header-title{
 	color: black;
 }

@@ -44,5 +44,28 @@
 	<script type="text/javascript" src="../js/jquery.min.js"></script>
 	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="../js/function.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		var stickyNavTop = $('#static-header-point').offset().top;
+		 
+		var stickyNav = function(){
+		var scrollTop = $(window).scrollTop();
+		      
+		if (scrollTop > stickyNavTop) { 
+		    $('#header-point').addClass('sticky');
+		    $('#header-point').css('display','block');
+		} else {
+		    $('#header-point').removeClass('sticky'); 
+		    $('#header-point').css('display','none');
+		}
+		};
+		 
+		stickyNav();
+		 
+		$(window).scroll(function() {
+		  stickyNav();
+		});
+	});
+	</script>
 </body>
 </html>
