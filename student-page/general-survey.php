@@ -1,5 +1,5 @@
 <h4><b>General</b></h4>
-<table class="table table-bordered tbl-general-style">
+<table class="table table-bordered table-striped tbl-general-style">
 	<tr>
 		<th colspan="1" rowspan="2"></th>
 		<th colspan="1" rowspan="2"></th>

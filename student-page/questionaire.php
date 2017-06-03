@@ -9,7 +9,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Admission & Registrarship</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -74,7 +74,7 @@
 	if($resp->num_rows > 0){
 ?>
 	<h4><b>Alumni Affairs & Placement</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -138,7 +138,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Administration</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -202,7 +202,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Accounting Office</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -266,7 +266,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Business Affairs Office</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -330,7 +330,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Cashier's Office</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -394,7 +394,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Clinic</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -458,7 +458,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Extension & Training</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -523,7 +523,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Gender & Development</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -587,7 +587,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Guidance Counseling</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -651,7 +651,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>ICTS</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -715,7 +715,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Library</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -779,7 +779,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Guidance Counseling</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -843,7 +843,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Physical Plant</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -907,7 +907,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Research & Development</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -971,7 +971,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Scholarship</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>
@@ -1035,7 +1035,7 @@
 	if($resp->num_rows >0){
 ?>
 	<h4><b>Student Affairs (OSAS)</b></h4>
-	<table class="table table-bordered tbl-style">
+	<table class="table table-bordered table-striped tbl-style">
 	<tr>
 		<th colspan="1"></th>
 		<th colspan="5" style="text-align:center;">Promptness of Services</th>

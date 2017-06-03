@@ -23,7 +23,13 @@
 
           <li><a href="survey.php">Take Survey</a></li>
 
-        <?php }}}
+        <?php } else {
+          ?>
+          <li><a href="#">You have finished taking survey</a></li>
+          <?php
+        }
+
+          }}
           else {
             echo '<li><a href="survey.php">Take Survey</a></li>';
           }}
