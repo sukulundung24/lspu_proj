@@ -9,7 +9,6 @@ body {
 }
 
 .sticky {
-  background-color:white;
   position: fixed;
   margin-right:100px;
   width: 100%;
@@ -18,48 +17,51 @@ body {
   z-index: 100;
   border-top: 0;
 }
+.sticky tbody {
+  background-color:white;
+}
 
 /*.sticky th:first-child{
   width:28px;
 }*/
 
-.sticky th:first-child{
+.sticky table th:first-child{
   width:30px;
 }
 
-.sticky th:nth-child(2){
+.sticky table th:nth-child(2){
   width:30px;
 }
 
-.sticky th:nth-child(3){
+.sticky table th:nth-child(3){
   width:30px;
 }
 
-.sticky th:nth-child(4){
+.sticky table th:nth-child(4){
   width:42px;
 }
 
-.sticky th:nth-child(5){
+.sticky table th:nth-child(5){
   width:30px;
 }
 
-.sticky th:nth-child(6){
+.sticky table th:nth-child(6){
   width:30px;
 }
 
-.sticky th:nth-child(7){
+.sticky table th:nth-child(7){
   width:30px;
 }
 
-.sticky th:nth-child(8){
+.sticky table th:nth-child(8){
   width:30px;
 }
 
-.sticky th:nth-child(9){
+.sticky table th:nth-child(9){
   width:30px;
 }x
 
-.sticky th:nth-child(10){
+.sticky table th:nth-child(10){
   width:43px;
 }
 

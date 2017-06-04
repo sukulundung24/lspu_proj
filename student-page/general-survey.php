@@ -1,4 +1,26 @@
 <h4><b>General</b></h4>
+
+<table id="header-point" class="table table-bordered table-striped tbl-general-style">
+	<tr>
+		<th colspan='6' style="text-align:center;">Quailty of Service Provided</th>
+		<th colspan='6' style="text-align:center;">Personnel Attitude</th>
+	</tr>
+	<tr>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>N/A</th>
+		<th>5</th>
+		<th>4</th>
+		<th>3</th>
+		<th>2</th>
+		<th>1</th>
+		<th>N/A</th>
+	</tr>
+</table>
+
 <table id="general-survey" class="table table-bordered table-striped tbl-general-style">
 	<tr>
 		<th colspan="1" rowspan="2"></th>
@@ -7,20 +29,7 @@
     	<th colspan="6" style="text-align:center;">Personnel Attitude</th>
     	<th colspan="1" rowspan="2" style="text-align:center;">Remarks</th>
 	</tr>
-	<tr id="header-point">
-		<th>5</th>
-		<th>4</th>
-		<th>3</th>
-		<th>2</th>
-		<th>1</th>
-		<th>N</th>
-		<th>5</th>
-		<th>4</th>
-		<th>3</th>
-		<th>2</th>
-		<th>1</th>
-		<th>N</th>
-	</tr>
+
 	<tr id="static-header-point">
 		<th>5</th>
 		<th>4</th>
