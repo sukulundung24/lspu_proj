@@ -77,22 +77,22 @@
 
 	<tr>
 		<td><b>III.</b></td>
-		<td class="guidance-general">&nbsp; &nbsp; &nbsp; &nbsp; A. Guidance Services</td>
-		<td><input class="1_guidance_input" type="radio" value="5" name="1_guidance_input"></td>
-		<td><input class="1_guidance_input" type="radio" value="4" name="1_guidance_input"></td>
-		<td><input class="1_guidance_input" type="radio" value="3" name="1_guidance_input"></td>
-		<td><input class="1_guidance_input" type="radio" value="2" name="1_guidance_input"></td>
-		<td><input class="1_guidance_input" type="radio" value="1" name="1_guidance_input"></td>
-		<td><input class="1_guidance_input" type="radio" value="0" name="1_guidance_input"></td>
+		<td class="guidance-general" colspan="14">&nbsp; &nbsp; &nbsp; &nbsp; A. Guidance Services</td>
+		<td class="hidetds"><input class="1_guidance_input" type="radio" value="5" name="1_guidance_input"></td>
+		<td class="hidetds"><input class="1_guidance_input" type="radio" value="4" name="1_guidance_input"></td>
+		<td class="hidetds"><input class="1_guidance_input" type="radio" value="3" name="1_guidance_input"></td>
+		<td class="hidetds"><input class="1_guidance_input" type="radio" value="2" name="1_guidance_input"></td>
+		<td class="hidetds"><input class="1_guidance_input" type="radio" value="1" name="1_guidance_input"></td>
+		<td class="hidetds"><input class="1_guidance_input" type="radio" value="0" name="1_guidance_input"></td>
 
-		<td><input class="2_guidance_input" type="radio" value="5" name="2_guidance_input"></td>
-		<td><input class="2_guidance_input" type="radio" value="4" name="2_guidance_input"></td>
-		<td><input class="2_guidance_input" type="radio" value="3" name="2_guidance_input"></td>
-		<td><input class="2_guidance_input" type="radio" value="2" name="2_guidance_input"></td>
-		<td><input class="2_guidance_input" type="radio" value="1" name="2_guidance_input"></td>
-		<td><input class="2_guidance_input" type="radio" value="0" name="2_guidance_input"></td>
+		<td class="hidetds"><input class="2_guidance_input" type="radio" value="5" name="2_guidance_input"></td>
+		<td class="hidetds"><input class="2_guidance_input" type="radio" value="4" name="2_guidance_input"></td>
+		<td class="hidetds"><input class="2_guidance_input" type="radio" value="3" name="2_guidance_input"></td>
+		<td class="hidetds"><input class="2_guidance_input" type="radio" value="2" name="2_guidance_input"></td>
+		<td class="hidetds"><input class="2_guidance_input" type="radio" value="1" name="2_guidance_input"></td>
+		<td class="hidetds"><input class="2_guidance_input" type="radio" value="0" name="2_guidance_input"></td>
 
-		<td><input type="text" name="guidance_remark" class="guidance_remark"></td>
+		<td class="hidetds"><input type="text" name="guidance_remark" class="guidance_remark"></td>
 	</tr>
 
 	<tr>
@@ -376,22 +376,22 @@
 
 	<tr>
 		<td><b>XI.</b></td>
-		<td class='infastructure-general'><b>Infastructure/Utilities</b></td>
-		<td><input class="1_utilities_input" type="radio" value="5" name="1_utilities_input"></td>
-		<td><input class="1_utilities_input" type="radio" value="4" name="1_utilities_input"></td>
-		<td><input class="1_utilities_input" type="radio" value="3" name="1_utilities_input"></td>
-		<td><input class="1_utilities_input" type="radio" value="2" name="1_utilities_input"></td>
-		<td><input class="1_utilities_input" type="radio" value="1" name="1_utilities_input"></td>
-		<td><input class="1_utilities_input" type="radio" value="0" name="1_utilities_input"></td>
+		<td colspan="14" class='infastructure-general'><b>Infastructure/Utilities</b></td>
+		<td class="hidetds"><input class="1_utilities_input" type="radio" value="5" name="1_utilities_input"></td>
+		<td class="hidetds"><input class="1_utilities_input" type="radio" value="4" name="1_utilities_input"></td>
+		<td class="hidetds"><input class="1_utilities_input" type="radio" value="3" name="1_utilities_input"></td>
+		<td class="hidetds"><input class="1_utilities_input" type="radio" value="2" name="1_utilities_input"></td>
+		<td class="hidetds"><input class="1_utilities_input" type="radio" value="1" name="1_utilities_input"></td>
+		<td class="hidetds"><input class="1_utilities_input" type="radio" value="0" name="1_utilities_input"></td>
 
-		<td><input class="2_utilities_input" type="radio" value="5" name="2_utilities_input"></td>
-		<td><input class="2_utilities_input" type="radio" value="4" name="2_utilities_input"></td>
-		<td><input class="2_utilities_input" type="radio" value="3" name="2_utilities_input"></td>
-		<td><input class="2_utilities_input" type="radio" value="2" name="2_utilities_input"></td>
-		<td><input class="2_utilities_input" type="radio" value="1" name="2_utilities_input"></td>
-		<td><input class="2_utilities_input" type="radio" value="0" name="2_utilities_input"></td>
+		<td class="hidetds"><input class="2_utilities_input" type="radio" value="5" name="2_utilities_input"></td>
+		<td class="hidetds"><input class="2_utilities_input" type="radio" value="4" name="2_utilities_input"></td>
+		<td class="hidetds"><input class="2_utilities_input" type="radio" value="3" name="2_utilities_input"></td>
+		<td class="hidetds"><input class="2_utilities_input" type="radio" value="2" name="2_utilities_input"></td>
+		<td class="hidetds"><input class="2_utilities_input" type="radio" value="1" name="2_utilities_input"></td>
+		<td class="hidetds"><input class="2_utilities_input" type="radio" value="0" name="2_utilities_input"></td>
 
-		<td><input type="text" name="utilities_remark" class="utilities_remark"></td>
+		<td class="hidetds"><input type="text" name="utilities_remark" class="utilities_remark"></td>
 	</tr>
 
 	<tr>

@@ -4,6 +4,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.hidetds{
+  display:none;
+}
+
 .sticky {
   background-color:white;
   position: fixed;

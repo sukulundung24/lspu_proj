@@ -51,7 +51,7 @@
 			    				<select class="form-control" id="print_general">
 			    					<option value="registrarship">Registrarship</option>
 			    					<option value="osas">Office of Student Affairs and Services</option>
-			    					<option value='guidance'>Guidance Services</option>
+			    					<!-- <option value='guidance'>Guidance Services</option> -->
 			    					<option value='admission'>Admission Services</option>
 			    					<option value='counseling'>Counseling Services</option>
 			    					<option value="testing">Testing Services</option>
@@ -66,7 +66,7 @@
 			    					<option value='cashier'>Cashier's Office</option>
 			    					<option value='budget'>Budget & Finance / Accounting</option>
 			    					<option value='security'>Security Services</option>
-			    					<option value='infastructure'>Infastructure/Utilities</option>
+			    					<!-- <option value='infastructure'>Infastructure/Utilities</option> -->
 			    					<option value='classroom'>Classroom</option>
 			    					<option value='cr'>Comfort Rooms</option>
 			    					<option value='science'>Science Laboratory</option>
