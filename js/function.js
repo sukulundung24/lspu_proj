@@ -889,7 +889,6 @@ $(document).ready(function(){
 				
 			} else {
 				alert("There's something wrong!");
-			}
 		})
 
 	})
