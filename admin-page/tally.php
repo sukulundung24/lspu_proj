@@ -85,15 +85,11 @@
 		$totalStudent_temp = $row5[0] - $row4[0];
 
 		$subTotal = ($row3[0] - $row4[0]) + $row2[0];
-		$tempTotal = (($subTotal+$totalStudent_temp)/$row5[0])*100;
+		$tempTotal = (($row5[0]-$row[0])/$row5[0])*100;
 
-		echo "<script>alert('".$row4[0]."');</script>";
+		echo "<script>alert('".($subTotal+$totalStudent_temp)."');</script>";
 
-		$tempFinish = ($row[0]/$row3[0])*100;
-
-		
-
-		echo "<script> $('.tot_num').html('<b>".$row5[0]."</b>'); </script>";
+		$tempFinish = ($row[0]/$row5[0])*100;
 
 		$query6 = "select count(*) from student_survey_status where status = 'finish'";
 		$resp6 = @mysqli_query($dbc,$query6);
