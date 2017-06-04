@@ -876,11 +876,9 @@ $(document).ready(function(){
 		},
 		function(data){
 			if(data=="success"){
-				alert(general_data)
 				$.post('../php_func/save_answer_general.php',{
 					general_data:general_data
 				},function(datas){
-					alert(datas);
 					if(datas=="success"){
 						alert("You have successfully filled out the survey!");
 						location.href = "dashboard.php";

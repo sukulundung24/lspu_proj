@@ -395,41 +395,38 @@ $rowCOFAns1_1=mysqli_fetch_array($respCOFAns1_1);
     $pdf->Cell(50,10,"  Percentage",1,0,'L',0);
     $pdf->SetFont('Arial','',10);
 
-    $percnetage5 = 0;
+    $percentage5 = 0;
     if($finalTotal>0){
         $percentage5 = ($total5/$finalTotal) * 100;
     }
     
     $pdf->Cell(20,10,$percentage5,1,0,'C',0);
     
-    $percnetage4 = 0;
+    $percentage4 = 0;
     if($finalTotal>0){
         $percentage4 = ($total4/$finalTotal) * 100;
     }
     $pdf->Cell(20,10,$percentage4,1,0,'C',0);
 
-    $percnetage3 = 0;
+    $percentage3 = 0;
     if($finalTotal>0){
         $percentage3 = ($total3/$finalTotal) * 100;
     }
     $pdf->Cell(20,10,$percentage3,1,0,'C',0);
 
-    $percnetage2 = 0;
+    $percentage2 = 0;
     if($finalTotal>0){
         $percentage2 = ($total2/$finalTotal) * 100;
     }
     $pdf->Cell(20,10,$percentage2,1,0,'C',0);
 
-    $percnetage1 = 0;
+    $percentage1 = 0;
     if($finalTotal>0){
         $percentage1 = ($total1/$finalTotal) * 100;
     }
     $pdf->Cell(20,10,$percentage1,1,0,'C',0);
     $pdf->Cell(20,10,"",1,0,'C',0);
     $pdf->Cell(20,10,"",1,0,'C',0);
-
-
-
 
     $pdf->Ln(10);
     $pdf->Ln(10);

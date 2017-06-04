@@ -37,17 +37,17 @@
 		    			<br><br><br><br>
 		    			<div class="row">
 		    				<div class="col-md-7">
-		    					Total Number: <span class="tot_num">1</span>
-		    				</div> 
-		    			</div>
-		    			<div class="row">
-		    				<div class="col-md-7">
 		    					# of students/employee who take the survey: <span class="tot_num_take">1</span>
 		    				</div> 
 		    			</div>
 		    			<div class="row">
 		    				<div class="col-md-7">
 		    					# of students/employee who do not take the survey: <span class="tot_num_not_take">1</span>
+		    				</div> 
+		    			</div>
+		    			<div class="row">
+		    				<div class="col-md-7">
+		    					Total Number: <span class="tot_num">1</span>
 		    				</div> 
 		    			</div>
 		    		</div>
@@ -87,15 +87,13 @@
 		$subTotal = ($row3[0] - $row4[0]) + $row2[0];
 		$tempTotal = (($row5[0]-$row[0])/$row5[0])*100;
 
-		echo "<script>alert('".($subTotal+$totalStudent_temp)."');</script>";
-
 		$tempFinish = ($row[0]/$row5[0])*100;
 
 		$query6 = "select count(*) from student_survey_status where status = 'finish'";
 		$resp6 = @mysqli_query($dbc,$query6);
 		$row6 = mysqli_fetch_array($resp6); 
 		echo "<script> $('.tot_num_take').html('<b>".$row6[0]."</b>'); </script>";
-
+		echo "<script> $('.tot_num').html('<b>".$row5[0]."</b>'); </script>";
 		$notTake = $row5[0] - $row6[0];
 		echo "<script> $('.tot_num_not_take').html('<b>".$notTake."</b>'); </script>";
 
