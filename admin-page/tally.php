@@ -77,14 +77,21 @@
 		$resp4 = @mysqli_query($dbc,$querySurveyTotal);
 		$row4 = mysqli_fetch_array($resp4);
 
-		$subTotal = ($row3[0] - $row4[0]) + $row2[0];
-		$tempTotal = ($subTotal/$row3[0])*100;
-
-		$tempFinish = ($row[0]/$row3[0])*100;
 
 		$queryStudentTotal = "select count(*) from tbl_id_number";
 		$resp5 = @mysqli_query($dbc,$queryStudentTotal);
 		$row5 = mysqli_fetch_array($resp5);
+
+		$totalStudent_temp = $row5[0] - $row4[0];
+
+		$subTotal = ($row3[0] - $row4[0]) + $row2[0];
+		$tempTotal = (($subTotal+$totalStudent_temp)/$row5[0])*100;
+
+		echo "<script>alert('".$row4[0]."');</script>";
+
+		$tempFinish = ($row[0]/$row3[0])*100;
+
+		
 
 		echo "<script> $('.tot_num').html('<b>".$row5[0]."</b>'); </script>";
 
