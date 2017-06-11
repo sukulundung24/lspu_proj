@@ -1,3 +1,3 @@
 <?php
-	echo 'panget ka';
+	echo 'panget ka din';
 ?>
