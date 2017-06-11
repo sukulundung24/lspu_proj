@@ -14,6 +14,11 @@
 
 			$year = date("Y");
 			$sem = "1st_sem";
+			
+			if(empty($data[$i]['remark'])){
+				$data[$i]['remark'] = " ";
+			}
+			
 			mysqli_stmt_bind_param($stmt,"ssssiis",$username,$year,$sem,$data[$i]['description'],$data[$i]['answer1'],$data[$i]['answer2'],$data[$i]['remark']);
 
 			mysqli_stmt_execute($stmt);

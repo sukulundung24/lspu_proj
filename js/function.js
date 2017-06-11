@@ -453,7 +453,7 @@ $(document).ready(function(){
 		$('.reg-general').each(function(i){
 			var ans1 = $('.1_registrar_input:checked').val();
 			var ans2 = $('.2_registrar_input:checked').val();
-			var remark = $('.registrar_remark').val();
+			var remark = $('.registrar_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -468,7 +468,7 @@ $(document).ready(function(){
 		$('.OSAS-general').each(function(i){
 			var ans1 = $('.1_student_input:checked').val();
 			var ans2 = $('.2_student_input:checked').val();
-			var remark = $('.student_remark').val();
+			var remark = $('.student_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -483,7 +483,7 @@ $(document).ready(function(){
 		$('.guidance-general').each(function(i){
 			var ans1 = $('.1_guidance_input:checked').val();
 			var ans2 = $('.2_guidance_input:checked').val();
-			var remark = $('.guidance_remark').val();
+			var remark = $('.guidance_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -498,7 +498,7 @@ $(document).ready(function(){
 		$('.admission-general').each(function(i){
 			var ans1 = $('.1_admission_input:checked').val();
 			var ans2 = $('.2_admission_input:checked').val();
-			var remark = $('.admission_remark').val();
+			var remark = $('.admission_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -513,7 +513,7 @@ $(document).ready(function(){
 		$('.counseling-general').each(function(i){
 			var ans1 = $('.1_counseling_input:checked').val();
 			var ans2 = $('.2_counseling_input:checked').val();
-			var remark = $('.counseling_remark').val();
+			var remark = $('.counseling_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -528,7 +528,7 @@ $(document).ready(function(){
 		$('.testing-general').each(function(i){
 			var ans1 = $('.1_testing_input:checked').val();
 			var ans2 = $('.2_testing_input:checked').val();
-			var remark = $('.testing_remark').val();
+			var remark = $('.testing_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -543,7 +543,7 @@ $(document).ready(function(){
 		$('.medical-general').each(function(i){
 			var ans1 = $('.1_medical_input:checked').val();
 			var ans2 = $('.2_medical_input:checked').val();
-			var remark = $('.medical_remark').val();
+			var remark = $('.medical_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -558,7 +558,7 @@ $(document).ready(function(){
 		$('.dental-general').each(function(i){
 			var ans1 = $('.1_dental_input:checked').val();
 			var ans2 = $('.2_dental_input:checked').val();
-			var remark = $('.dental_remark').val();
+			var remark = $('.dental_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -573,7 +573,7 @@ $(document).ready(function(){
 		$('.campus-general').each(function(i){
 			var ans1 = $('.1_campus_input:checked').val();
 			var ans2 = $('.2_campus_input:checked').val();
-			var remark = $('.campus_remark').val();
+			var remark = $('.campus_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -588,7 +588,7 @@ $(document).ready(function(){
 		$('.canteen-general').each(function(i){
 			var ans1 = $('.1_canteen_input:checked').val();
 			var ans2 = $('.2_canteen_input:checked').val();
-			var remark = $('.canteen_remark').val();
+			var remark = $('.canteen_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -603,7 +603,7 @@ $(document).ready(function(){
 		$('.scholarship-general').each(function(i){
 			var ans1 = $('.1_scholarship_input:checked').val();
 			var ans2 = $('.2_scholarship_input:checked').val();
-			var remark = $('.scholarship_remark').val();
+			var remark = $('.scholarship_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -618,7 +618,7 @@ $(document).ready(function(){
 		$('.GAD-general').each(function(i){
 			var ans1 = $('.1_gender_input:checked').val();
 			var ans2 = $('.2_gender_input:checked').val();
-			var remark = $('.gender_remark').val();
+			var remark = $('.gender_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -633,7 +633,7 @@ $(document).ready(function(){
 		$('.library-general').each(function(i){
 			var ans1 = $('.1_library_input:checked').val();
 			var ans2 = $('.2_library_input:checked').val();
-			var remark = $('.library_remark').val();
+			var remark = $('.library_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -648,7 +648,7 @@ $(document).ready(function(){
 		$('.research-general').each(function(i){
 			var ans1 = $('.1_research_input:checked').val();
 			var ans2 = $('.2_research_input:checked').val();
-			var remark = $('.research_remark').val();
+			var remark = $('.research_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -663,7 +663,7 @@ $(document).ready(function(){
 		$('.cashier-general').each(function(i){
 			var ans1 = $('.1_cashier_input:checked').val();
 			var ans2 = $('.2_cashier_input:checked').val();
-			var remark = $('.cashier_remark').val();
+			var remark = $('.cashier_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -678,7 +678,7 @@ $(document).ready(function(){
 		$('.budget-general').each(function(i){
 			var ans1 = $('.1_budget_input:checked').val();
 			var ans2 = $('.2_budget_input:checked').val();
-			var remark = $('.budget_remark').val();
+			var remark = $('.budget_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -693,7 +693,7 @@ $(document).ready(function(){
 		$('.security-general').each(function(i){
 			var ans1 = $('.1_security_input:checked').val();
 			var ans2 = $('.2_security_input:checked').val();
-			var remark = $('.security_remark').val();
+			var remark = $('.security_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -708,7 +708,7 @@ $(document).ready(function(){
 		$('.infastructure-general').each(function(i){
 			var ans1 = $('.1_utilities_input:checked').val();
 			var ans2 = $('.2_utilities_input:checked').val();
-			var remark = $('.utilities_remark').val();
+			var remark = $('.utilities_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -723,7 +723,7 @@ $(document).ready(function(){
 		$('.classroom-general').each(function(i){
 			var ans1 = $('.1_classroom_input:checked').val();
 			var ans2 = $('.2_classroom_input:checked').val();
-			var remark = $('.classroom_remark').val();
+			var remark = $('.classroom_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -738,7 +738,7 @@ $(document).ready(function(){
 		$('.comfort-general').each(function(i){
 			var ans1 = $('.1_cr_input:checked').val();
 			var ans2 = $('.2_cr_input:checked').val();
-			var remark = $('.cr_remark').val();
+			var remark = $('.cr_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -753,7 +753,7 @@ $(document).ready(function(){
 		$('.science-general').each(function(i){
 			var ans1 = $('.1_science_input:checked').val();
 			var ans2 = $('.2_science_input:checked').val();
-			var remark = $('.science_remark').val();
+			var remark = $('.science_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -768,7 +768,7 @@ $(document).ready(function(){
 		$('.computer-general').each(function(i){
 			var ans1 = $('.1_computer_input:checked').val();
 			var ans2 = $('.2_computer_input:checked').val();
-			var remark = $('.computer_remark').val();
+			var remark = $('.computer_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -783,7 +783,7 @@ $(document).ready(function(){
 		$('.BAO-general').each(function(i){
 			var ans1 = $('.1_business_input:checked').val();
 			var ans2 = $('.2_business_input:checked').val();
-			var remark = $('.business_remark').val();
+			var remark = $('.business_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -798,7 +798,7 @@ $(document).ready(function(){
 		$('.internet-general').each(function(i){
 			var ans1 = $('.1_internet_input:checked').val();
 			var ans2 = $('.2_internet_input:checked').val();
-			var remark = $('.internet_remark').val();
+			var remark = $('.internet_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -813,7 +813,7 @@ $(document).ready(function(){
 		$('.seminar-general').each(function(i){
 			var ans1 = $('.1_seminar_input:checked').val();
 			var ans2 = $('.2_seminar_input:checked').val();
-			var remark = $('.seminar_remark').val();
+			var remark = $('.seminar_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -828,7 +828,7 @@ $(document).ready(function(){
 		$('.sports-general').each(function(i){
 			var ans1 = $('.1_sports_input:checked').val();
 			var ans2 = $('.2_sports_input:checked').val();
-			var remark = $('.sports_remark').val();
+			var remark = $('.sports_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -843,7 +843,7 @@ $(document).ready(function(){
 		$('.lounge-general').each(function(i){
 			var ans1 = $('.1_lounge_input:checked').val();
 			var ans2 = $('.2_lounge_input:checked').val();
-			var remark = $('.lounge_remark').val();
+			var remark = $('.lounge_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
@@ -858,7 +858,7 @@ $(document).ready(function(){
 		$('.college-general').each(function(i){
 			var ans1 = $('.1_college_input:checked').val();
 			var ans2 = $('.2_college_input:checked').val();
-			var remark = $('.college_remark').val();
+			var remark = $('.college_remark').val() +' ';
 
 			if(ans1 && ans2 && remark){
 				general_data.push({
